@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the RY WC City Select plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: RY WC City Select 1.0.0\n"
+"Project-Id-Version: RY WC City Select 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ry-wc-city-select\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2019-12-07T12:33:23+08:00\n"
+"POT-Creation-Date: 2019-12-09T10:28:53+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: ry-wc-city-select\n"
@@ -939,947 +939,947 @@ msgctxt "TW Chiayi City"
 msgid "West Dist"
 msgstr ""
 
-#: cities/TW.php:211
+#: cities/TW.php:213
 msgctxt "TW Chiayi County"
 msgid "Fanlu Township"
 msgstr ""
 
-#: cities/TW.php:212
+#: cities/TW.php:214
 msgctxt "TW Chiayi County"
 msgid "Meishan Township"
 msgstr ""
 
-#: cities/TW.php:213
+#: cities/TW.php:215
 msgctxt "TW Chiayi County"
 msgid "Zhuqi Township"
 msgstr ""
 
-#: cities/TW.php:214
+#: cities/TW.php:216
 msgctxt "TW Chiayi County"
 msgid "Alishan Township"
 msgstr ""
 
-#: cities/TW.php:215
+#: cities/TW.php:217
 msgctxt "TW Chiayi County"
 msgid "Zhongpu Township"
 msgstr ""
 
-#: cities/TW.php:216
+#: cities/TW.php:218
 msgctxt "TW Chiayi County"
 msgid "Dapu Township"
 msgstr ""
 
-#: cities/TW.php:217
+#: cities/TW.php:219
 msgctxt "TW Chiayi County"
 msgid "Shuishang Township"
 msgstr ""
 
-#: cities/TW.php:218
+#: cities/TW.php:220
 msgctxt "TW Chiayi County"
 msgid "Lucao Township"
 msgstr ""
 
-#: cities/TW.php:219
+#: cities/TW.php:221
 msgctxt "TW Chiayi County"
 msgid "Taibao City"
 msgstr ""
 
-#: cities/TW.php:220
+#: cities/TW.php:222
 msgctxt "TW Chiayi County"
 msgid "Puzi City"
 msgstr ""
 
-#: cities/TW.php:221
-msgctxt "TW Chiayi County"
-msgid "Dongshi Township"
-msgstr ""
-
-#: cities/TW.php:222
-msgctxt "TW Chiayi County"
-msgid "Liujiao Township"
-msgstr ""
-
 #: cities/TW.php:223
 msgctxt "TW Chiayi County"
-msgid "Xingang Township"
+msgid "Dongshi Township"
 msgstr ""
 
 #: cities/TW.php:224
 msgctxt "TW Chiayi County"
-msgid "Minxiong Township"
+msgid "Liujiao Township"
 msgstr ""
 
 #: cities/TW.php:225
 msgctxt "TW Chiayi County"
-msgid "Dalin Township"
+msgid "Xingang Township"
 msgstr ""
 
 #: cities/TW.php:226
 msgctxt "TW Chiayi County"
-msgid "Xikou Township"
+msgid "Minxiong Township"
 msgstr ""
 
 #: cities/TW.php:227
 msgctxt "TW Chiayi County"
-msgid "Yizhu Township"
+msgid "Dalin Township"
 msgstr ""
 
 #: cities/TW.php:228
 msgctxt "TW Chiayi County"
+msgid "Xikou Township"
+msgstr ""
+
+#: cities/TW.php:229
+msgctxt "TW Chiayi County"
+msgid "Yizhu Township"
+msgstr ""
+
+#: cities/TW.php:230
+msgctxt "TW Chiayi County"
 msgid "Budai Township"
-msgstr ""
-
-#: cities/TW.php:231
-msgctxt "TW Yunlin County"
-msgid "Dounan Township"
-msgstr ""
-
-#: cities/TW.php:232
-msgctxt "TW Yunlin County"
-msgid "Dapi Township"
 msgstr ""
 
 #: cities/TW.php:233
 msgctxt "TW Yunlin County"
-msgid "Huwei Township"
+msgid "Dounan Township"
 msgstr ""
 
 #: cities/TW.php:234
 msgctxt "TW Yunlin County"
-msgid "Tuku Township"
+msgid "Dapi Township"
 msgstr ""
 
 #: cities/TW.php:235
 msgctxt "TW Yunlin County"
-msgid "Baozhong Township"
+msgid "Huwei Township"
 msgstr ""
 
 #: cities/TW.php:236
 msgctxt "TW Yunlin County"
-msgid "Dongshi Township"
+msgid "Tuku Township"
 msgstr ""
 
 #: cities/TW.php:237
 msgctxt "TW Yunlin County"
-msgid "Taixi Township"
+msgid "Baozhong Township"
 msgstr ""
 
 #: cities/TW.php:238
 msgctxt "TW Yunlin County"
-msgid "Lunbei Township"
+msgid "Dongshi Township"
 msgstr ""
 
 #: cities/TW.php:239
 msgctxt "TW Yunlin County"
-msgid "Mailiao Township"
+msgid "Taixi Township"
 msgstr ""
 
 #: cities/TW.php:240
 msgctxt "TW Yunlin County"
-msgid "Douliu City"
+msgid "Lunbei Township"
 msgstr ""
 
 #: cities/TW.php:241
 msgctxt "TW Yunlin County"
-msgid "Linnei Township"
+msgid "Mailiao Township"
 msgstr ""
 
 #: cities/TW.php:242
 msgctxt "TW Yunlin County"
-msgid "Gukeng Township"
+msgid "Douliu City"
 msgstr ""
 
 #: cities/TW.php:243
 msgctxt "TW Yunlin County"
-msgid "Citong Township"
+msgid "Linnei Township"
 msgstr ""
 
 #: cities/TW.php:244
 msgctxt "TW Yunlin County"
-msgid "Xiluo Township"
+msgid "Gukeng Township"
 msgstr ""
 
 #: cities/TW.php:245
 msgctxt "TW Yunlin County"
-msgid "Erlun Township"
+msgid "Citong Township"
 msgstr ""
 
 #: cities/TW.php:246
 msgctxt "TW Yunlin County"
-msgid "Beigang Township"
+msgid "Xiluo Township"
 msgstr ""
 
 #: cities/TW.php:247
 msgctxt "TW Yunlin County"
-msgid "Shuilin Township"
+msgid "Erlun Township"
 msgstr ""
 
 #: cities/TW.php:248
 msgctxt "TW Yunlin County"
-msgid "Kouhu Township"
+msgid "Beigang Township"
 msgstr ""
 
 #: cities/TW.php:249
 msgctxt "TW Yunlin County"
-msgid "Sihu Township"
+msgid "Shuilin Township"
 msgstr ""
 
 #: cities/TW.php:250
 msgctxt "TW Yunlin County"
+msgid "Kouhu Township"
+msgstr ""
+
+#: cities/TW.php:251
+msgctxt "TW Yunlin County"
+msgid "Sihu Township"
+msgstr ""
+
+#: cities/TW.php:252
+msgctxt "TW Yunlin County"
 msgid "Yuanzhang Township"
-msgstr ""
-
-#: cities/TW.php:253
-msgctxt "TW Tainan City"
-msgid "West Central Dist"
-msgstr ""
-
-#: cities/TW.php:254
-msgctxt "TW Tainan City"
-msgid "East Dist"
 msgstr ""
 
 #: cities/TW.php:255
 msgctxt "TW Tainan City"
-msgid "South Dist"
+msgid "West Central Dist"
 msgstr ""
 
 #: cities/TW.php:256
 msgctxt "TW Tainan City"
-msgid "North Dist"
+msgid "East Dist"
 msgstr ""
 
 #: cities/TW.php:257
 msgctxt "TW Tainan City"
-msgid "Anping Dist"
+msgid "South Dist"
 msgstr ""
 
 #: cities/TW.php:258
 msgctxt "TW Tainan City"
-msgid "Annan Dist"
+msgid "North Dist"
 msgstr ""
 
 #: cities/TW.php:259
 msgctxt "TW Tainan City"
-msgid "Yongkang Dist"
+msgid "Anping Dist"
 msgstr ""
 
 #: cities/TW.php:260
 msgctxt "TW Tainan City"
-msgid "Guiren Dist"
+msgid "Annan Dist"
 msgstr ""
 
 #: cities/TW.php:261
 msgctxt "TW Tainan City"
-msgid "Xinhua Dist"
+msgid "Yongkang Dist"
 msgstr ""
 
 #: cities/TW.php:262
 msgctxt "TW Tainan City"
-msgid "Zuozhen Dist"
+msgid "Guiren Dist"
 msgstr ""
 
 #: cities/TW.php:263
 msgctxt "TW Tainan City"
-msgid "Yujing Dist"
+msgid "Xinhua Dist"
 msgstr ""
 
 #: cities/TW.php:264
 msgctxt "TW Tainan City"
-msgid "Nanxi Dist"
+msgid "Zuozhen Dist"
 msgstr ""
 
 #: cities/TW.php:265
 msgctxt "TW Tainan City"
-msgid "Nanhua Dist"
+msgid "Yujing Dist"
 msgstr ""
 
 #: cities/TW.php:266
 msgctxt "TW Tainan City"
-msgid "Rende Dist"
+msgid "Nanxi Dist"
 msgstr ""
 
 #: cities/TW.php:267
 msgctxt "TW Tainan City"
-msgid "Guanmiao Dist"
+msgid "Nanhua Dist"
 msgstr ""
 
 #: cities/TW.php:268
 msgctxt "TW Tainan City"
-msgid "Longqi Dist"
+msgid "Rende Dist"
 msgstr ""
 
 #: cities/TW.php:269
 msgctxt "TW Tainan City"
-msgid "Guantian Dist"
+msgid "Guanmiao Dist"
 msgstr ""
 
 #: cities/TW.php:270
 msgctxt "TW Tainan City"
-msgid "Madou Dist"
+msgid "Longqi Dist"
 msgstr ""
 
 #: cities/TW.php:271
 msgctxt "TW Tainan City"
-msgid "Jiali Dist"
+msgid "Guantian Dist"
 msgstr ""
 
 #: cities/TW.php:272
 msgctxt "TW Tainan City"
-msgid "Xigang Dist"
+msgid "Madou Dist"
 msgstr ""
 
 #: cities/TW.php:273
 msgctxt "TW Tainan City"
-msgid "Qigu Dist"
+msgid "Jiali Dist"
 msgstr ""
 
 #: cities/TW.php:274
 msgctxt "TW Tainan City"
-msgid "Jiangjun Dist"
+msgid "Xigang Dist"
 msgstr ""
 
 #: cities/TW.php:275
 msgctxt "TW Tainan City"
-msgid "Xuejia Dist"
+msgid "Qigu Dist"
 msgstr ""
 
 #: cities/TW.php:276
 msgctxt "TW Tainan City"
-msgid "Beimen Dist"
+msgid "Jiangjun Dist"
 msgstr ""
 
 #: cities/TW.php:277
 msgctxt "TW Tainan City"
-msgid "Xinying Dist"
+msgid "Xuejia Dist"
 msgstr ""
 
 #: cities/TW.php:278
 msgctxt "TW Tainan City"
-msgid "Houbi Dist"
+msgid "Beimen Dist"
 msgstr ""
 
 #: cities/TW.php:279
 msgctxt "TW Tainan City"
-msgid "Baihe Dist"
+msgid "Xinying Dist"
 msgstr ""
 
 #: cities/TW.php:280
 msgctxt "TW Tainan City"
-msgid "Dongshan Dist"
+msgid "Houbi Dist"
 msgstr ""
 
 #: cities/TW.php:281
 msgctxt "TW Tainan City"
-msgid "Liujia Dist"
+msgid "Baihe Dist"
 msgstr ""
 
 #: cities/TW.php:282
 msgctxt "TW Tainan City"
-msgid "Xiaying Dist"
+msgid "Dongshan Dist"
 msgstr ""
 
 #: cities/TW.php:283
 msgctxt "TW Tainan City"
-msgid "Liuying Dist"
+msgid "Liujia Dist"
 msgstr ""
 
 #: cities/TW.php:284
 msgctxt "TW Tainan City"
-msgid "Yanshui Dist"
+msgid "Xiaying Dist"
 msgstr ""
 
 #: cities/TW.php:285
 msgctxt "TW Tainan City"
-msgid "Shanhua Dist"
+msgid "Liuying Dist"
 msgstr ""
 
 #: cities/TW.php:286
 msgctxt "TW Tainan City"
-msgid "Danei Dist"
+msgid "Yanshui Dist"
 msgstr ""
 
 #: cities/TW.php:287
 msgctxt "TW Tainan City"
-msgid "Shanshang Dist"
+msgid "Shanhua Dist"
 msgstr ""
 
 #: cities/TW.php:288
 msgctxt "TW Tainan City"
-msgid "Xinshi Dist"
+msgid "Danei Dist"
 msgstr ""
 
 #: cities/TW.php:289
 msgctxt "TW Tainan City"
+msgid "Shanshang Dist"
+msgstr ""
+
+#: cities/TW.php:290
+msgctxt "TW Tainan City"
+msgid "Xinshi Dist"
+msgstr ""
+
+#: cities/TW.php:291
+msgctxt "TW Tainan City"
 msgid "Anding Dist"
-msgstr ""
-
-#: cities/TW.php:292
-msgctxt "TW Kaohsiung City"
-msgid "Xinxing Dist"
-msgstr ""
-
-#: cities/TW.php:293
-msgctxt "TW Kaohsiung City"
-msgid "Qianjin Dist"
 msgstr ""
 
 #: cities/TW.php:294
 msgctxt "TW Kaohsiung City"
-msgid "Lingya Dist"
+msgid "Xinxing Dist"
 msgstr ""
 
 #: cities/TW.php:295
 msgctxt "TW Kaohsiung City"
-msgid "Yancheng Dist"
+msgid "Qianjin Dist"
 msgstr ""
 
 #: cities/TW.php:296
 msgctxt "TW Kaohsiung City"
-msgid "Gushan Dist"
+msgid "Lingya Dist"
 msgstr ""
 
 #: cities/TW.php:297
 msgctxt "TW Kaohsiung City"
-msgid "Qijin Dist"
+msgid "Yancheng Dist"
 msgstr ""
 
 #: cities/TW.php:298
 msgctxt "TW Kaohsiung City"
-msgid "Qianzhen Dist"
+msgid "Gushan Dist"
 msgstr ""
 
 #: cities/TW.php:299
 msgctxt "TW Kaohsiung City"
-msgid "Sanmin Dist"
+msgid "Qijin Dist"
 msgstr ""
 
 #: cities/TW.php:300
 msgctxt "TW Kaohsiung City"
-msgid "Nanzi Dist"
+msgid "Qianzhen Dist"
 msgstr ""
 
 #: cities/TW.php:301
 msgctxt "TW Kaohsiung City"
-msgid "Xiaogang Dist"
+msgid "Sanmin Dist"
 msgstr ""
 
 #: cities/TW.php:302
 msgctxt "TW Kaohsiung City"
-msgid "Zuoying Dist"
+msgid "Nanzi Dist"
 msgstr ""
 
 #: cities/TW.php:303
 msgctxt "TW Kaohsiung City"
-msgid "Renwu Dist"
+msgid "Xiaogang Dist"
 msgstr ""
 
 #: cities/TW.php:304
 msgctxt "TW Kaohsiung City"
-msgid "Dashe Dist"
+msgid "Zuoying Dist"
 msgstr ""
 
 #: cities/TW.php:305
+msgctxt "TW Kaohsiung City"
+msgid "Renwu Dist"
+msgstr ""
+
+#: cities/TW.php:306
+msgctxt "TW Kaohsiung City"
+msgid "Dashe Dist"
+msgstr ""
+
+#: cities/TW.php:307
 msgctxt "TW Nanhai Islands"
 msgid "Dongsha Islands"
 msgstr ""
 
-#: cities/TW.php:306
+#: cities/TW.php:308
 msgctxt "TW Nanhai Islands"
 msgid "Nansha Islands"
 msgstr ""
 
-#: cities/TW.php:307
+#: cities/TW.php:309
 msgctxt "TW Kaohsiung City"
 msgid "Gangshan Dist"
 msgstr ""
 
-#: cities/TW.php:308
+#: cities/TW.php:310
 msgctxt "TW Kaohsiung City"
 msgid "Luzhu Dist"
 msgstr ""
 
-#: cities/TW.php:309
+#: cities/TW.php:311
 msgctxt "TW Kaohsiung City"
 msgid "Alian Dist"
 msgstr ""
 
-#: cities/TW.php:310
+#: cities/TW.php:312
 msgctxt "TW Kaohsiung City"
 msgid "Tianliao Dist"
 msgstr ""
 
-#: cities/TW.php:311
+#: cities/TW.php:313
 msgctxt "TW Kaohsiung City"
 msgid "Yanchao Dist"
 msgstr ""
 
-#: cities/TW.php:312
+#: cities/TW.php:314
 msgctxt "TW Kaohsiung City"
 msgid "Qiaotou Dist"
 msgstr ""
 
-#: cities/TW.php:313
+#: cities/TW.php:315
 msgctxt "TW Kaohsiung City"
 msgid "Ziguan Dist"
 msgstr ""
 
-#: cities/TW.php:314
+#: cities/TW.php:316
 msgctxt "TW Kaohsiung City"
 msgid "Mituo Dist"
 msgstr ""
 
-#: cities/TW.php:315
+#: cities/TW.php:317
 msgctxt "TW Kaohsiung City"
 msgid "Yongan Dist"
 msgstr ""
 
-#: cities/TW.php:316
+#: cities/TW.php:318
 msgctxt "TW Kaohsiung City"
 msgid "Hunei Dist"
 msgstr ""
 
-#: cities/TW.php:317
+#: cities/TW.php:319
 msgctxt "TW Kaohsiung City"
 msgid "Fengshan Dist"
 msgstr ""
 
-#: cities/TW.php:318
+#: cities/TW.php:320
 msgctxt "TW Kaohsiung City"
 msgid "Daliao Dist"
 msgstr ""
 
-#: cities/TW.php:319
+#: cities/TW.php:321
 msgctxt "TW Kaohsiung City"
 msgid "Linyuan Dist"
 msgstr ""
 
-#: cities/TW.php:320
+#: cities/TW.php:322
 msgctxt "TW Kaohsiung City"
 msgid "Niaosong Dist"
 msgstr ""
 
-#: cities/TW.php:321
+#: cities/TW.php:323
 msgctxt "TW Kaohsiung City"
 msgid "Dashu Dist"
 msgstr ""
 
-#: cities/TW.php:322
+#: cities/TW.php:324
 msgctxt "TW Kaohsiung City"
 msgid "Qishan Dist"
 msgstr ""
 
-#: cities/TW.php:323
+#: cities/TW.php:325
 msgctxt "TW Kaohsiung City"
 msgid "Meinong Dist"
 msgstr ""
 
-#: cities/TW.php:324
+#: cities/TW.php:326
 msgctxt "TW Kaohsiung City"
 msgid "Liugui Dist"
 msgstr ""
 
-#: cities/TW.php:325
+#: cities/TW.php:327
 msgctxt "TW Kaohsiung City"
 msgid "Neimen Dist"
 msgstr ""
 
-#: cities/TW.php:326
+#: cities/TW.php:328
 msgctxt "TW Kaohsiung City"
 msgid "Shanlin Dist"
 msgstr ""
 
-#: cities/TW.php:327
+#: cities/TW.php:329
 msgctxt "TW Kaohsiung City"
 msgid "Jiaxian Dist"
 msgstr ""
 
-#: cities/TW.php:328
+#: cities/TW.php:330
 msgctxt "TW Kaohsiung City"
 msgid "Taoyuan Dist"
 msgstr ""
 
-#: cities/TW.php:329
+#: cities/TW.php:331
 msgctxt "TW Kaohsiung City"
 msgid "Namaxia Dist"
 msgstr ""
 
-#: cities/TW.php:330
+#: cities/TW.php:332
 msgctxt "TW Kaohsiung City"
 msgid "Maolin Dist"
 msgstr ""
 
-#: cities/TW.php:331
+#: cities/TW.php:333
 msgctxt "TW Kaohsiung City"
 msgid "Qieding Dist"
 msgstr ""
 
-#: cities/TW.php:334
+#: cities/TW.php:336
 msgctxt "TW Penghu County"
 msgid "Magong City"
 msgstr ""
 
-#: cities/TW.php:335
+#: cities/TW.php:337
 msgctxt "TW Penghu County"
 msgid "Xiyu Township"
 msgstr ""
 
-#: cities/TW.php:336
+#: cities/TW.php:338
 msgctxt "TW Penghu County"
 msgid "Wangan Township"
 msgstr ""
 
-#: cities/TW.php:337
+#: cities/TW.php:339
 msgctxt "TW Penghu County"
 msgid "Qimei Township"
 msgstr ""
 
-#: cities/TW.php:338
+#: cities/TW.php:340
 msgctxt "TW Penghu County"
 msgid "Baisha Township"
 msgstr ""
 
-#: cities/TW.php:339
+#: cities/TW.php:341
 msgctxt "TW Penghu County"
 msgid "Huxi Township"
 msgstr ""
 
-#: cities/TW.php:342
+#: cities/TW.php:344
 msgctxt "TW Kinmen County"
 msgid "Jinsha Township"
 msgstr ""
 
-#: cities/TW.php:343
+#: cities/TW.php:345
 msgctxt "TW Kinmen County"
 msgid "Jinhu Township"
 msgstr ""
 
-#: cities/TW.php:344
+#: cities/TW.php:346
 msgctxt "TW Kinmen County"
 msgid "Jinning Township"
 msgstr ""
 
-#: cities/TW.php:345
+#: cities/TW.php:347
 msgctxt "TW Kinmen County"
 msgid "Jincheng Township"
 msgstr ""
 
-#: cities/TW.php:346
+#: cities/TW.php:348
 msgctxt "TW Kinmen County"
 msgid "Lieyu Township"
 msgstr ""
 
-#: cities/TW.php:347
+#: cities/TW.php:349
 msgctxt "TW Kinmen County"
 msgid "Wuqiu Township"
 msgstr ""
 
-#: cities/TW.php:350
+#: cities/TW.php:352
 msgctxt "TW Pingtung County"
 msgid "Pingtung City"
 msgstr ""
 
-#: cities/TW.php:351
+#: cities/TW.php:353
 msgctxt "TW Pingtung County"
 msgid "Sandimen Township"
 msgstr ""
 
-#: cities/TW.php:352
+#: cities/TW.php:354
 msgctxt "TW Pingtung County"
 msgid "Wutai Township"
 msgstr ""
 
-#: cities/TW.php:353
+#: cities/TW.php:355
 msgctxt "TW Pingtung County"
 msgid "Majia Township"
 msgstr ""
 
-#: cities/TW.php:354
+#: cities/TW.php:356
 msgctxt "TW Pingtung County"
 msgid "Jiuru Township"
 msgstr ""
 
-#: cities/TW.php:355
+#: cities/TW.php:357
 msgctxt "TW Pingtung County"
 msgid "Ligang Township"
 msgstr ""
 
-#: cities/TW.php:356
+#: cities/TW.php:358
 msgctxt "TW Pingtung County"
 msgid "Gaoshu Township"
 msgstr ""
 
-#: cities/TW.php:357
+#: cities/TW.php:359
 msgctxt "TW Pingtung County"
 msgid "Yanpu Township"
 msgstr ""
 
-#: cities/TW.php:358
+#: cities/TW.php:360
 msgctxt "TW Pingtung County"
 msgid "Changzhi Township"
 msgstr ""
 
-#: cities/TW.php:359
+#: cities/TW.php:361
 msgctxt "TW Pingtung County"
 msgid "Linluo Township"
 msgstr ""
 
-#: cities/TW.php:360
+#: cities/TW.php:362
 msgctxt "TW Pingtung County"
 msgid "Zhutian Township"
 msgstr ""
 
-#: cities/TW.php:361
+#: cities/TW.php:363
 msgctxt "TW Pingtung County"
 msgid "Neipu Township"
 msgstr ""
 
-#: cities/TW.php:362
+#: cities/TW.php:364
 msgctxt "TW Pingtung County"
 msgid "Wandan Township"
 msgstr ""
 
-#: cities/TW.php:363
+#: cities/TW.php:365
 msgctxt "TW Pingtung County"
 msgid "Chaozhou Township"
 msgstr ""
 
-#: cities/TW.php:364
+#: cities/TW.php:366
 msgctxt "TW Pingtung County"
 msgid "Taiwu Township"
 msgstr ""
 
-#: cities/TW.php:365
+#: cities/TW.php:367
 msgctxt "TW Pingtung County"
 msgid "Laiyi Township"
 msgstr ""
 
-#: cities/TW.php:366
+#: cities/TW.php:368
 msgctxt "TW Pingtung County"
 msgid "Wanluan Township"
 msgstr ""
 
-#: cities/TW.php:367
+#: cities/TW.php:369
 msgctxt "TW Pingtung County"
 msgid "Kanding Township"
 msgstr ""
 
-#: cities/TW.php:368
+#: cities/TW.php:370
 msgctxt "TW Pingtung County"
 msgid "Xinpi Township"
 msgstr ""
 
-#: cities/TW.php:369
+#: cities/TW.php:371
 msgctxt "TW Pingtung County"
 msgid "Nanzhou Township"
 msgstr ""
 
-#: cities/TW.php:370
+#: cities/TW.php:372
 msgctxt "TW Pingtung County"
 msgid "Linbian Township"
 msgstr ""
 
-#: cities/TW.php:371
+#: cities/TW.php:373
 msgctxt "TW Pingtung County"
 msgid "Donggang Township"
 msgstr ""
 
-#: cities/TW.php:372
+#: cities/TW.php:374
 msgctxt "TW Pingtung County"
 msgid "Liuqiu Township"
 msgstr ""
 
-#: cities/TW.php:373
+#: cities/TW.php:375
 msgctxt "TW Pingtung County"
 msgid "Jiadong Township"
 msgstr ""
 
-#: cities/TW.php:374
+#: cities/TW.php:376
 msgctxt "TW Pingtung County"
 msgid "Xinyuan Township"
 msgstr ""
 
-#: cities/TW.php:375
+#: cities/TW.php:377
 msgctxt "TW Pingtung County"
 msgid "Fangliao Township"
 msgstr ""
 
-#: cities/TW.php:376
+#: cities/TW.php:378
 msgctxt "TW Pingtung County"
 msgid "Fangshan Township"
 msgstr ""
 
-#: cities/TW.php:377
+#: cities/TW.php:379
 msgctxt "TW Pingtung County"
 msgid "Chunri Township"
 msgstr ""
 
-#: cities/TW.php:378
+#: cities/TW.php:380
 msgctxt "TW Pingtung County"
 msgid "Shizi Township"
 msgstr ""
 
-#: cities/TW.php:379
+#: cities/TW.php:381
 msgctxt "TW Pingtung County"
 msgid "Checheng Township"
 msgstr ""
 
-#: cities/TW.php:380
+#: cities/TW.php:382
 msgctxt "TW Pingtung County"
 msgid "Mudan Township"
 msgstr ""
 
-#: cities/TW.php:381
+#: cities/TW.php:383
 msgctxt "TW Pingtung County"
 msgid "Hengchun Township"
 msgstr ""
 
-#: cities/TW.php:382
+#: cities/TW.php:384
 msgctxt "TW Pingtung County"
 msgid "Manzhou Township"
 msgstr ""
 
-#: cities/TW.php:385
+#: cities/TW.php:387
 msgctxt "TW Taitung County"
 msgid "Taitung City"
 msgstr ""
 
-#: cities/TW.php:386
+#: cities/TW.php:388
 msgctxt "TW Taitung County"
 msgid "Ludao Township"
 msgstr ""
 
-#: cities/TW.php:387
+#: cities/TW.php:389
 msgctxt "TW Taitung County"
 msgid "Lanyu Township"
 msgstr ""
 
-#: cities/TW.php:388
+#: cities/TW.php:390
 msgctxt "TW Taitung County"
 msgid "Yanping Township"
 msgstr ""
 
-#: cities/TW.php:389
+#: cities/TW.php:391
 msgctxt "TW Taitung County"
 msgid "Beinan Township"
 msgstr ""
 
-#: cities/TW.php:390
+#: cities/TW.php:392
 msgctxt "TW Taitung County"
 msgid "Luye Township"
 msgstr ""
 
-#: cities/TW.php:391
+#: cities/TW.php:393
 msgctxt "TW Taitung County"
 msgid "Guanshan Township"
 msgstr ""
 
-#: cities/TW.php:392
+#: cities/TW.php:394
 msgctxt "TW Taitung County"
 msgid "Haiduan Township"
 msgstr ""
 
-#: cities/TW.php:393
+#: cities/TW.php:395
 msgctxt "TW Taitung County"
 msgid "Chishang Township"
 msgstr ""
 
-#: cities/TW.php:394
+#: cities/TW.php:396
 msgctxt "TW Taitung County"
 msgid "Donghe Township"
 msgstr ""
 
-#: cities/TW.php:395
+#: cities/TW.php:397
 msgctxt "TW Taitung County"
 msgid "Chenggong Township"
 msgstr ""
 
-#: cities/TW.php:396
+#: cities/TW.php:398
 msgctxt "TW Taitung County"
 msgid "Changbin Township"
 msgstr ""
 
-#: cities/TW.php:397
+#: cities/TW.php:399
 msgctxt "TW Taitung County"
 msgid "Taimali Township"
 msgstr ""
 
-#: cities/TW.php:398
+#: cities/TW.php:400
 msgctxt "TW Taitung County"
 msgid "Jinfeng Township"
 msgstr ""
 
-#: cities/TW.php:399
+#: cities/TW.php:401
 msgctxt "TW Taitung County"
 msgid "Dawu Township"
 msgstr ""
 
-#: cities/TW.php:400
+#: cities/TW.php:402
 msgctxt "TW Taitung County"
 msgid "Daren Township"
 msgstr ""
 
-#: cities/TW.php:403
+#: cities/TW.php:405
 msgctxt "TW Hualien County"
 msgid "Hualien City"
 msgstr ""
 
-#: cities/TW.php:404
+#: cities/TW.php:406
 msgctxt "TW Hualien County"
 msgid "Xincheng Township"
 msgstr ""
 
-#: cities/TW.php:405
+#: cities/TW.php:407
 msgctxt "TW Hualien County"
 msgid "Xiulin Township"
 msgstr ""
 
-#: cities/TW.php:406
+#: cities/TW.php:408
 msgctxt "TW Hualien County"
 msgid "Jian Township"
 msgstr ""
 
-#: cities/TW.php:407
+#: cities/TW.php:409
 msgctxt "TW Hualien County"
 msgid "Shoufeng Township"
 msgstr ""
 
-#: cities/TW.php:408
+#: cities/TW.php:410
 msgctxt "TW Hualien County"
 msgid "Fenglin Township"
 msgstr ""
 
-#: cities/TW.php:409
+#: cities/TW.php:411
 msgctxt "TW Hualien County"
 msgid "Guangfu Township"
 msgstr ""
 
-#: cities/TW.php:410
+#: cities/TW.php:412
 msgctxt "TW Hualien County"
 msgid "Fengbin Township"
 msgstr ""
 
-#: cities/TW.php:411
+#: cities/TW.php:413
 msgctxt "TW Hualien County"
 msgid "Ruisui Township"
 msgstr ""
 
-#: cities/TW.php:412
+#: cities/TW.php:414
 msgctxt "TW Hualien County"
 msgid "Wanrong Township"
 msgstr ""
 
-#: cities/TW.php:413
+#: cities/TW.php:415
 msgctxt "TW Hualien County"
 msgid "Yuli Township"
 msgstr ""
 
-#: cities/TW.php:414
+#: cities/TW.php:416
 msgctxt "TW Hualien County"
 msgid "Zhuoxi Township"
 msgstr ""
 
-#: cities/TW.php:415
+#: cities/TW.php:417
 msgctxt "TW Hualien County"
 msgid "Fuli Township"
 msgstr ""

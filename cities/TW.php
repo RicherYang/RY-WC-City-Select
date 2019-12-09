@@ -208,6 +208,8 @@ return [
 		'Chiayi City' => [
 			[_x('East Dist', 'TW Chiayi City', 'ry-wc-city-select'), 600],
 			[_x('West Dist', 'TW Chiayi City', 'ry-wc-city-select'), 600],
+		],
+		'Chiayi County' => [
 			[_x('Fanlu Township', 'TW Chiayi County', 'ry-wc-city-select'), 602],
 			[_x('Meishan Township', 'TW Chiayi County', 'ry-wc-city-select'), 603],
 			[_x('Zhuqi Township', 'TW Chiayi County', 'ry-wc-city-select'), 604],

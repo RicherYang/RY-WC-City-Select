@@ -15,7 +15,7 @@ return [
 		'Miaoli County' => __('Miaoli County', 'ry-wc-city-select'),
 		'Changhua County' => __('Changhua County', 'ry-wc-city-select'),
 		'Nantou County' => __('Nantou County', 'ry-wc-city-select'),
-		'TYunlin CountyW14' => __('Yunlin County', 'ry-wc-city-select'),
+		'Yunlin County' => __('Yunlin County', 'ry-wc-city-select'),
 		'Chiayi County' => __('Chiayi County', 'ry-wc-city-select'),
 		'Pingtung County' => __('Pingtung County', 'ry-wc-city-select'),
 		'Yilan County' => __('Yilan County', 'ry-wc-city-select'),
