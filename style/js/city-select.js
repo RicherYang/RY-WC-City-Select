@@ -86,7 +86,7 @@ jQuery(function ($) {
 	});
 
 	$(document.body).on('change', 'select.state_select, #calc_shipping_state', function () {
-		var $container = $(this).closest('form'),
+		var $container = $(this).closest('div'),
 			country = $container.find('#billing_country, #shipping_country, #calc_shipping_country').val(),
 			state = $(this).val();
 
@@ -115,7 +115,7 @@ jQuery(function ($) {
 	});
 
 	$(document.body).on('change', 'select.city_select', function () {
-		var $container = $(this).closest('form'),
+		var $container = $(this).closest('div'),
 			$city = $container.find('#billing_city, #shipping_city, #calc_shipping_city'),
 			postcode = $city.find(':selected').data('postcode');
 
@@ -150,7 +150,7 @@ jQuery(function ($) {
 		$citybox.parent().find('.select2-container').remove();
 		$citybox.replaceWith($newcity);
 
-		$('#' + input_id).closest('form').find('#billing_postcode, #shipping_postcode, #calc_shipping_postcode').val('');
+		$('#' + input_id).closest('div').find('#billing_postcode, #shipping_postcode, #calc_shipping_postcode').val('');
 	}
 
 	function disableCity($citybox) {

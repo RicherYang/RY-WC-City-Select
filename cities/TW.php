@@ -2,7 +2,7 @@
 
 return [
 	'TW' => [
-		'Taipei City' => [
+		'TAIPEI CITY' => [
 			[_x('Zhongzheng Dist', 'TW Taipei City', 'ry-wc-city-select'), 100],
 			[_x('Datong Dist', 'TW Taipei City', 'ry-wc-city-select'), 103],
 			[_x('Zhongshan Dist', 'TW Taipei City', 'ry-wc-city-select'), 104],
@@ -16,7 +16,7 @@ return [
 			[_x('Nangang Dist', 'TW Taipei City', 'ry-wc-city-select'), 115],
 			[_x('Wenshan Dist', 'TW Taipei City', 'ry-wc-city-select'), 116]
 		],
-		'Keelung City' => [
+		'KEELUNG CITY' => [
 			[_x('Renai Dist', 'TW Keelung City', 'ry-wc-city-select'), 200],
 			[_x('Xinyi Dist', 'TW Keelung City', 'ry-wc-city-select'), 201],
 			[_x('Zhongzheng Dist', 'TW Keelung City', 'ry-wc-city-select'), 202],
@@ -25,7 +25,7 @@ return [
 			[_x('Nuannuan Dist', 'TW Keelung City', 'ry-wc-city-select'), 205],
 			[_x('Qidu Dist', 'TW Keelung City', 'ry-wc-city-select'), 206]
 		],
-		'New Taipei City' => [
+		'NEW TAIPEI CITY' => [
 			[_x('Wanli Dist', 'TW New Taipei City', 'ry-wc-city-select'), 207],
 			[_x('Jinshan Dist', 'TW New Taipei City', 'ry-wc-city-select'), 208],
 			[_x('Banqiao Dist', 'TW New Taipei City', 'ry-wc-city-select'), 220],
@@ -56,13 +56,13 @@ return [
 			[_x('Sanzhi Dist', 'TW New Taipei City', 'ry-wc-city-select'), 252],
 			[_x('Shimen Dist', 'TW New Taipei City', 'ry-wc-city-select'), 253]
 		],
-		'Lienchiang County' => [
+		'LIENCHIANG COUNTY' => [
 			[_x('Nangan Township', 'TW Lienchiang County', 'ry-wc-city-select'), 209],
 			[_x('Beigan Township', 'TW Lienchiang County', 'ry-wc-city-select'), 210],
 			[_x('Juguang Township', 'TW Lienchiang County', 'ry-wc-city-select'), 211],
 			[_x('Dongyin Township', 'TW Lienchiang County', 'ry-wc-city-select'), 212]
 		],
-		'Yilan County' => [
+		'YILAN COUNTY' => [
 			[_x('Yilan City', 'TW Yilan County', 'ry-wc-city-select'), 260],
 			[_x('Toucheng Township', 'TW Yilan County', 'ry-wc-city-select'), 261],
 			[_x('Jiaoxi Township', 'TW Yilan County', 'ry-wc-city-select'), 262],
@@ -76,12 +76,12 @@ return [
 			[_x('Suao Township', 'TW Yilan County', 'ry-wc-city-select'), 270],
 			[_x('Nanao Township', 'TW Yilan County', 'ry-wc-city-select'), 272]
 		],
-		'Hsinchu City' => [
+		'HSINCHU CITY' => [
 			[_x('East Dist', 'TW Hsinchu City', 'ry-wc-city-select'), 300],
 			[_x('North Dist', 'TW Hsinchu City', 'ry-wc-city-select'), 300],
 			[_x('Xiangshan Dist', 'TW Hsinchu City', 'ry-wc-city-select'), 300]
 		],
-		'Hsinchu County' => [
+		'HSINCHU COUNTY' => [
 			[_x('Zhubei City', 'TW Hsinchu County', 'ry-wc-city-select'), 302],
 			[_x('Hukou Township', 'TW Hsinchu County', 'ry-wc-city-select'), 303],
 			[_x('Xinfeng Township', 'TW Hsinchu County', 'ry-wc-city-select'), 304],
@@ -96,7 +96,7 @@ return [
 			[_x('Beipu Township', 'TW Hsinchu County', 'ry-wc-city-select'), 314],
 			[_x('Emei Township', 'TW Hsinchu County', 'ry-wc-city-select'), 315]
 		],
-		'Taoyuan City' => [
+		'TAOYUAN CITY' => [
 			[_x('Zhongli Dist', 'TW Taoyuan City', 'ry-wc-city-select'), 320],
 			[_x('Pingzhen Dist', 'TW Taoyuan City', 'ry-wc-city-select'), 324],
 			[_x('Longtan Dist', 'TW Taoyuan City', 'ry-wc-city-select'), 325],
@@ -111,7 +111,7 @@ return [
 			[_x('Dayuan Dist', 'TW Taoyuan City', 'ry-wc-city-select'), 337],
 			[_x('Luzhu Dist', 'TW Taoyuan City', 'ry-wc-city-select'), 338]
 		],
-		'Miaoli County' => [
+		'MIAOLI COUNTY' => [
 			[_x('Zhunan Township', 'TW Miaoli County', 'ry-wc-city-select'), 350],
 			[_x('Toufen City', 'TW Miaoli County', 'ry-wc-city-select'), 351],
 			[_x('Sanwan Township', 'TW Miaoli County', 'ry-wc-city-select'), 352],
@@ -131,7 +131,7 @@ return [
 			[_x('Xihu Township', 'TW Miaoli County', 'ry-wc-city-select'), 368],
 			[_x('Zhuolan Township', 'TW Miaoli County', 'ry-wc-city-select'), 369]
 		],
-		'Taichung City' => [
+		'TAICHUNG CITY' => [
 			[_x('Central Dist', 'TW Taichung City', 'ry-wc-city-select'), 400],
 			[_x('East Dist', 'TW Taichung City', 'ry-wc-city-select'), 401],
 			[_x('South Dist', 'TW Taichung City', 'ry-wc-city-select'), 402],
@@ -162,7 +162,7 @@ return [
 			[_x('Waipu Dist', 'TW Taichung City', 'ry-wc-city-select'), 438],
 			[_x('Daan Dist', 'TW Taichung City', 'ry-wc-city-select'), 439]
 		],
-		'Changhua County' => [
+		'CHANGHUA COUNTY' => [
 			[_x('Changhua City', 'TW Changhua County', 'ry-wc-city-select'), 500],
 			[_x('Fenyuan Township', 'TW Changhua County', 'ry-wc-city-select'), 502],
 			[_x('Huatan Township', 'TW Changhua County', 'ry-wc-city-select'), 503],
@@ -190,7 +190,7 @@ return [
 			[_x('Fangyuan Township', 'TW Changhua County', 'ry-wc-city-select'), 528],
 			[_x('Ershui Township', 'TW Changhua County', 'ry-wc-city-select'), 530]
 		],
-		'Nantou County' => [
+		'NANTOU COUNTY' => [
 			[_x('Nantou City', 'TW Nantou County', 'ry-wc-city-select'), 540],
 			[_x('Zhongliao Township', 'TW Nantou County', 'ry-wc-city-select'), 541],
 			[_x('Caotun Township', 'TW Nantou County', 'ry-wc-city-select'), 542],
@@ -205,11 +205,11 @@ return [
 			[_x('Zhushan Township', 'TW Nantou County', 'ry-wc-city-select'), 557],
 			[_x('Lugu Township', 'TW Nantou County', 'ry-wc-city-select'), 558]
 		],
-		'Chiayi City' => [
+		'CHIAYI CITY' => [
 			[_x('East Dist', 'TW Chiayi City', 'ry-wc-city-select'), 600],
 			[_x('West Dist', 'TW Chiayi City', 'ry-wc-city-select'), 600],
 		],
-		'Chiayi County' => [
+		'CHIAYI COUNTY' => [
 			[_x('Fanlu Township', 'TW Chiayi County', 'ry-wc-city-select'), 602],
 			[_x('Meishan Township', 'TW Chiayi County', 'ry-wc-city-select'), 603],
 			[_x('Zhuqi Township', 'TW Chiayi County', 'ry-wc-city-select'), 604],
@@ -229,7 +229,7 @@ return [
 			[_x('Yizhu Township', 'TW Chiayi County', 'ry-wc-city-select'), 624],
 			[_x('Budai Township', 'TW Chiayi County', 'ry-wc-city-select'), 625]
 		],
-		'Yunlin County' => [
+		'YUNLIN COUNTY' => [
 			[_x('Dounan Township', 'TW Yunlin County', 'ry-wc-city-select'), 630],
 			[_x('Dapi Township', 'TW Yunlin County', 'ry-wc-city-select'), 631],
 			[_x('Huwei Township', 'TW Yunlin County', 'ry-wc-city-select'), 632],
@@ -251,7 +251,7 @@ return [
 			[_x('Sihu Township', 'TW Yunlin County', 'ry-wc-city-select'), 654],
 			[_x('Yuanzhang Township', 'TW Yunlin County', 'ry-wc-city-select'), 655]
 		],
-		'Tainan City' => [
+		'TAINAN CITY' => [
 			[_x('West Central Dist', 'TW Tainan City', 'ry-wc-city-select'), 700],
 			[_x('East Dist', 'TW Tainan City', 'ry-wc-city-select'), 701],
 			[_x('South Dist', 'TW Tainan City', 'ry-wc-city-select'), 702],
@@ -290,7 +290,7 @@ return [
 			[_x('Xinshi Dist', 'TW Tainan City', 'ry-wc-city-select'), 744],
 			[_x('Anding Dist', 'TW Tainan City', 'ry-wc-city-select'), 745]
 		],
-		'Kaohsiung City' => [
+		'KAOHSIUNG CITY' => [
 			[_x('Xinxing Dist', 'TW Kaohsiung City', 'ry-wc-city-select'), 800],
 			[_x('Qianjin Dist', 'TW Kaohsiung City', 'ry-wc-city-select'), 801],
 			[_x('Lingya Dist', 'TW Kaohsiung City', 'ry-wc-city-select'), 802],
@@ -332,7 +332,7 @@ return [
 			[_x('Maolin Dist', 'TW Kaohsiung City', 'ry-wc-city-select'), 851],
 			[_x('Qieding Dist', 'TW Kaohsiung City', 'ry-wc-city-select'), 852]
 		],
-		'Penghu County' => [
+		'PENGHU COUNTY' => [
 			[_x('Magong City', 'TW Penghu County', 'ry-wc-city-select'), 880],
 			[_x('Xiyu Township', 'TW Penghu County', 'ry-wc-city-select'), 881],
 			[_x('Wangan Township', 'TW Penghu County', 'ry-wc-city-select'), 882],
@@ -340,7 +340,7 @@ return [
 			[_x('Baisha Township', 'TW Penghu County', 'ry-wc-city-select'), 884],
 			[_x('Huxi Township', 'TW Penghu County', 'ry-wc-city-select'), 885]
 		],
-		'Kinmen County' => [
+		'KINMEN COUNTY' => [
 			[_x('Jinsha Township', 'TW Kinmen County', 'ry-wc-city-select'), 890],
 			[_x('Jinhu Township', 'TW Kinmen County', 'ry-wc-city-select'), 891],
 			[_x('Jinning Township', 'TW Kinmen County', 'ry-wc-city-select'), 892],
@@ -348,7 +348,7 @@ return [
 			[_x('Lieyu Township', 'TW Kinmen County', 'ry-wc-city-select'), 894],
 			[_x('Wuqiu Township', 'TW Kinmen County', 'ry-wc-city-select'), 896]
 		],
-		'Pingtung County' => [
+		'PINGTUNG COUNTY' => [
 			[_x('Pingtung City', 'TW Pingtung County', 'ry-wc-city-select'), 900],
 			[_x('Sandimen Township', 'TW Pingtung County', 'ry-wc-city-select'), 901],
 			[_x('Wutai Township', 'TW Pingtung County', 'ry-wc-city-select'), 902],
@@ -383,7 +383,7 @@ return [
 			[_x('Hengchun Township', 'TW Pingtung County', 'ry-wc-city-select'), 946],
 			[_x('Manzhou Township', 'TW Pingtung County', 'ry-wc-city-select'), 947]
 		],
-		'Taitung County' => [
+		'TAITUNG COUNTY' => [
 			[_x('Taitung City', 'TW Taitung County', 'ry-wc-city-select'), 950],
 			[_x('Ludao Township', 'TW Taitung County', 'ry-wc-city-select'), 951],
 			[_x('Lanyu Township', 'TW Taitung County', 'ry-wc-city-select'), 952],
@@ -401,7 +401,7 @@ return [
 			[_x('Dawu Township', 'TW Taitung County', 'ry-wc-city-select'), 965],
 			[_x('Daren Township', 'TW Taitung County', 'ry-wc-city-select'), 966]
 		],
-		'Hualien County' => [
+		'HUALIEN COUNTY' => [
 			[_x('Hualien City', 'TW Hualien County', 'ry-wc-city-select'), 970],
 			[_x('Xincheng Township', 'TW Hualien County', 'ry-wc-city-select'), 971],
 			[_x('Xiulin Township', 'TW Hualien County', 'ry-wc-city-select'), 972],
