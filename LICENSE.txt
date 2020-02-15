@@ -1,6 +1,6 @@
 RY WC City Select
 
-Copyright 2019 - 2019 by Richer Yang
+Copyright 2019 - 2020 by Richer Yang
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
