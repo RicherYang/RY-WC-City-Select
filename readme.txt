@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 5.0
 Requires PHP: 5.6.20
 Tested up to: 5.3.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -77,6 +77,9 @@ or my [person website page](https://richer.tw/ry-wc-city-select/).
 
 
 == Changelog ==
+
+= 1.0.5 - 2020/03/12 =
+* update Support WooCommerce 4.
 
 = 1.0.4 - 2020/02/15 =
 * update WooCommerce tested version.

@@ -15,9 +15,10 @@ final class RY_CWT {
 			add_filter('woocommerce_billing_fields', [__CLASS__, 'billing_fields']);
 			add_filter('woocommerce_shipping_fields', [__CLASS__, 'shipping_fields']);
 			add_filter('woocommerce_form_field_city', [__CLASS__, 'form_field_city'], 10, 4);
-			add_action( 'wp_enqueue_scripts', [__CLASS__, 'load_scripts']);
+			add_action('wp_enqueue_scripts', [__CLASS__, 'load_scripts']);
 
 			add_filter('woocommerce_states', [__CLASS__, 'load_country_states']);
+			add_filter('woocommerce_rest_prepare_report_customers', [__CLASS__, 'set_state_local']);
 		}
 	}
 
@@ -170,6 +171,18 @@ final class RY_CWT {
 		}
 
 		self::$cities = apply_filters('ry_wc_city_select_cities', $cities);
+	}
+
+	public static function set_state_local($response) {
+		static $states;
+		if( !isset($states[$response->data['country']])) {
+			$states[$response->data['country']] = WC()->countries->get_states($response->data['country']);
+		}
+
+		if( isset($states[$response->data['country']][$response->data['state']]) ) {
+			$response->data['state'] = $states[$response->data['country']][$response->data['state']];
+		}
+		return $response;
 	}
 
 	public static function plugin_activation() {
