@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 5.0
 Requires PHP: 5.6.20
 Tested up to: 5.3.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -77,6 +77,9 @@ or my [person website page](https://richer.tw/ry-wc-city-select/).
 
 
 == Changelog ==
+
+= 1.0.6 - 2020/03/24 =
+* add Kuwait states and cities. (thx [Ahmed Safaa](https://github.com/Mello21century))
 
 = 1.0.5 - 2020/03/12 =
 * update Support WooCommerce 4.
