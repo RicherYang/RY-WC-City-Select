@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 5.0
 Requires PHP: 5.6.20
 Tested up to: 5.3.0
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -37,17 +37,17 @@ add_filter( 'ry_wc_city_select_cities', 'my_cities' );
  * The City list can list of city name with postcode or just city name.
  */
 function my_cities( $cities ) {
-	$cities['XX'] = array(
-		'YYY' => array( // city name with postcoe
-			['City', 100],
-			['Another City', 101]
-		),
-		'ZZZ' => array( // just city name
-			'City 3',
-			'City 4'
-		)
-	);
-	return $cities;
+    $cities['XX'] = array(
+        'YYY' => array( // city name with postcoe
+            ['City', 100],
+            ['Another City', 101]
+        ),
+        'ZZZ' => array( // just city name
+            'City 3',
+            'City 4'
+        )
+    );
+    return $cities;
 }
 `
 
@@ -75,10 +75,17 @@ The sample file is cities/TW.php and states/TW.php
 Report bugs on the [GitHub repository](https://github.com/RicherYang/RY-WC-City-Select/issues),
 or my [person website page](https://richer.tw/ry-wc-city-select/).
 
+= All cities list from http://geonames.org/  =
+From the [RY-WC-City-Select-cities-files](https://github.com/sergioxdev/RY-WC-City-Select-cities-files)
+You can get ALL states and cities list in the world.
+But some state or city may use different name with the official name.
 
 == Changelog ==
 
-= 1.0.6 - 2020/03/24 =
+= 1.0.7 - 2020/03/14 =
+* add info in readme.txt.
+
+= 1.0.6 - 2020/03/14 =
 * add Kuwait states and cities. (thx [Ahmed Safaa](https://github.com/Mello21century))
 
 = 1.0.5 - 2020/03/12 =
