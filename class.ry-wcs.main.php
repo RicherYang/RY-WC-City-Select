@@ -21,6 +21,12 @@ final class RY_CWT
 
             add_filter('woocommerce_states', [__CLASS__, 'load_country_states']);
             add_filter('woocommerce_rest_prepare_report_customers', [__CLASS__, 'set_state_local']);
+
+            if (apply_filters('ry_wei_load_geonames_org', false)) {
+                if (4000000 > ini_get('pcre.backtrack_limit')) {
+                    ini_set('pcre.backtrack_limit', '4000000');
+                }
+            }
         }
     }
 
@@ -135,14 +141,26 @@ final class RY_CWT
         }
     }
 
+    protected static function i18n_files_path()
+    {
+        $file_path = RY_WCS_PLUGIN_DIR;
+
+        if (apply_filters('ry_wei_load_geonames_org', false)) {
+            $file_path .= 'geonames-org-data/';
+        }
+
+        return $file_path;
+    }
+
     public static function load_country_states($states)
     {
         $allowed = array_merge(WC()->countries->get_allowed_countries(), WC()->countries->get_shipping_countries());
 
         if ($allowed) {
+            $base_path = self::i18n_files_path();
             foreach ($allowed as $code => $country) {
-                if (file_exists(RY_WCS_PLUGIN_DIR . 'states/' . $code . '.php')) {
-                    $states = array_merge($states, include(RY_WCS_PLUGIN_DIR . 'states/' . $code . '.php'));
+                if (file_exists($base_path . 'states/' . $code . '.php')) {
+                    $states = array_merge($states, include($base_path . 'states/' . $code . '.php'));
                 }
             }
         }
@@ -169,9 +187,10 @@ final class RY_CWT
         $allowed = array_merge(WC()->countries->get_allowed_countries(), WC()->countries->get_shipping_countries());
 
         if ($allowed) {
+            $base_path = self::i18n_files_path();
             foreach ($allowed as $code => $country) {
-                if (file_exists(RY_WCS_PLUGIN_DIR . 'cities/' . $code . '.php')) {
-                    $cities = array_merge($cities, include(RY_WCS_PLUGIN_DIR . 'cities/' . $code . '.php'));
+                if (file_exists($base_path . 'cities/' . $code . '.php')) {
+                    $cities = array_merge($cities, include($base_path . 'cities/' . $code . '.php'));
                 }
             }
         }

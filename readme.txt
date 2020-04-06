@@ -77,10 +77,20 @@ or my [person website page](https://richer.tw/ry-wc-city-select/).
 
 = All cities list from http://geonames.org/  =
 From the [RY-WC-City-Select-cities-files](https://github.com/sergioxdev/RY-WC-City-Select-cities-files)
-You can get ALL states and cities list in the world.
+You can add almost main states and cities list in the world.
 But some state or city may use different name with the official name.
 
+To enable geonames.org data, add code into you theme functions.php.
+Or use Code Snippets[https://wordpress.org/plugins/code-snippets/] to add code.
+`
+add_filter('ry_wei_load_geonames_org', '__return_true');
+`
+
+
 == Changelog ==
+
+= 1.0.8 - 2020/04/06 =
+* add geonames.org data in plugin.
 
 = 1.0.7 - 2020/03/14 =
 * add info in readme.txt.
