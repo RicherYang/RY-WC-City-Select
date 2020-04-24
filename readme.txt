@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
 Requires at least: 5.0
 Requires PHP: 5.6.20
-Tested up to: 5.3.0
-Stable tag: 1.0.7
+Tested up to: 5.4.0
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -82,12 +82,16 @@ But some state or city may use different name with the official name.
 
 To enable geonames.org data, add code into you theme functions.php.
 Or use Code Snippets[https://wordpress.org/plugins/code-snippets/] to add code.
+
 `
 add_filter('ry_wei_load_geonames_org', '__return_true');
 `
 
 
 == Changelog ==
+
+= 1.0.9 - 2020/04/21 =
+* fix some theme error.
 
 = 1.0.8 - 2020/04/06 =
 * add geonames.org data in plugin.

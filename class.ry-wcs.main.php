@@ -5,7 +5,11 @@ final class RY_CWT
 {
     public static $cities;
 
+    protected static $use_geonames_org;
+    protected static $geonames_org_path = 'geonames-org-data';
+
     private static $initiated = false;
+
 
     public static function init()
     {
@@ -22,7 +26,23 @@ final class RY_CWT
             add_filter('woocommerce_states', [__CLASS__, 'load_country_states']);
             add_filter('woocommerce_rest_prepare_report_customers', [__CLASS__, 'set_state_local']);
 
-            if (apply_filters('ry_wei_load_geonames_org', false)) {
+            self::$use_geonames_org = apply_filters('ry_wei_load_geonames_org', false);
+
+            if (self::$use_geonames_org) {
+                if (!is_dir(RY_WCS_PLUGIN_DIR . self::$geonames_org_path)) {
+                    if (!function_exists('unzip_file')) {
+                        require_once ABSPATH . 'wp-admin/includes/file.php';
+                        WP_Filesystem();
+                    }
+
+                    $result = unzip_file(RY_WCS_PLUGIN_DIR . self::$geonames_org_path . '.zip', RY_WCS_PLUGIN_DIR);
+                    if ($result !== true) {
+                        self::$use_geonames_org = false;
+                    }
+                }
+            }
+
+            if (self::$use_geonames_org) {
                 if (4000000 > ini_get('pcre.backtrack_limit')) {
                     ini_set('pcre.backtrack_limit', '4000000');
                 }
@@ -145,8 +165,8 @@ final class RY_CWT
     {
         $file_path = RY_WCS_PLUGIN_DIR;
 
-        if (apply_filters('ry_wei_load_geonames_org', false)) {
-            $file_path .= 'geonames-org-data/';
+        if (self::$use_geonames_org) {
+            $file_path .= self::$geonames_org_path . '/';
         }
 
         return $file_path;
