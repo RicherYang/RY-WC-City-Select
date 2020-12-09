@@ -2,10 +2,10 @@
 Contributors: fantasyworld
 Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
-Requires at least: 5.0
-Requires PHP: 5.6.20
-Tested up to: 5.4.0
-Stable tag: 1.0.9
+Requires at least: 5.2
+Requires PHP: 7.3
+Tested up to: 5.6.0
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -89,6 +89,9 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 1.0.10 - 2020/12/09 =
+* checked support new verison 
 
 = 1.0.9 - 2020/04/21 =
 * fix some theme error.
