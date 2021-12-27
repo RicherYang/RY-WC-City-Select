@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TW' => [
         'TAIPEI CITY' => __('Taipei City', 'ry-wc-city-select'),

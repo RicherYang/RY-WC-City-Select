@@ -1,5 +1,4 @@
 <?php
-
 return [
     'TW' => [
         'TAIPEI CITY' => [
@@ -207,7 +206,7 @@ return [
         ],
         'CHIAYI CITY' => [
             [_x('East Dist', 'TW Chiayi City', 'ry-wc-city-select'), 600],
-            [_x('West Dist', 'TW Chiayi City', 'ry-wc-city-select'), 600],
+            [_x('West Dist', 'TW Chiayi City', 'ry-wc-city-select'), 600]
         ],
         'CHIAYI COUNTY' => [
             [_x('Fanlu Township', 'TW Chiayi County', 'ry-wc-city-select'), 602],

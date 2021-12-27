@@ -1,5 +1,4 @@
 jQuery(function ($) {
-
     // ry_wc_city_select_params is required to continue, ensure the object exists
     // wc_country_select_params is used for selectWoo texts. This one is added by WC
     if (typeof wc_country_select_params === 'undefined' || typeof ry_wc_city_select_params === 'undefined') {
@@ -21,7 +20,6 @@ jQuery(function ($) {
                         if (1 === overChars) {
                             return wc_country_select_params.i18n_input_too_long_1;
                         }
-
                         return wc_country_select_params.i18n_input_too_long_n.replace('%qty%', overChars);
                     },
                     inputTooShort: function (args) {
@@ -30,7 +28,6 @@ jQuery(function ($) {
                         if (1 === remainingChars) {
                             return wc_country_select_params.i18n_input_too_short_1;
                         }
-
                         return wc_country_select_params.i18n_input_too_short_n.replace('%qty%', remainingChars);
                     },
                     loadingMore: function () {
@@ -40,7 +37,6 @@ jQuery(function ($) {
                         if (args.maximum === 1) {
                             return wc_country_select_params.i18n_selection_too_long_1;
                         }
-
                         return wc_country_select_params.i18n_selection_too_long_n.replace('%qty%', args.maximum);
                     },
                     noResults: function () {

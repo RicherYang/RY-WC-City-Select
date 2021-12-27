@@ -1,5 +1,4 @@
 <?php
-
 return [
     'KW' => [
         'AHMADI' => [
@@ -32,7 +31,7 @@ return [
             _x('Wafra', 'Ahmadi', 'ry-wc-city-select'),
             _x('Khairan', 'Ahmadi', 'ry-wc-city-select'),
             _x('Dhaher', 'Ahmadi', 'ry-wc-city-select'),
-            _x('Abu Hasaniya', 'Ahmadi', 'ry-wc-city-select'),
+            _x('Abu Hasaniya', 'Ahmadi', 'ry-wc-city-select')
         ],
         'FARWANIYAH' => [
             _x('Abdulla Al Mubarak Al Sabah', 'Farwaniyah', 'ry-wc-city-select'),
@@ -58,7 +57,7 @@ return [
             _x('Jaleeb Al-Shyoukh', 'Farwaniyah', 'ry-wc-city-select'),
             _x('Dajeej', 'Farwaniyah', 'ry-wc-city-select'),
             _x('Al Hasawi', 'Farwaniyah', 'ry-wc-city-select'),
-            _x('Abbasiyah', 'Farwaniyah', 'ry-wc-city-select'),
+            _x('Abbasiyah', 'Farwaniyah', 'ry-wc-city-select')
         ],
         'HAWALLY' => [
             _x('Al Bidaa', 'Hawally', 'ry-wc-city-select'),
@@ -75,7 +74,7 @@ return [
             _x('Salwa', 'Hawally', 'ry-wc-city-select'),
             _x('Sha\'ab', 'Hawally', 'ry-wc-city-select'),
             _x('Sideeq', 'Hawally', 'ry-wc-city-select'),
-            _x('Zahra', 'Hawally', 'ry-wc-city-select'),
+            _x('Zahra', 'Hawally', 'ry-wc-city-select')
         ],
         'JAHRA' => [
             _x('A\'youn', 'Jahra', 'ry-wc-city-select'),
@@ -108,7 +107,7 @@ return [
             _x('Al Salmi', 'Jahra', 'ry-wc-city-select'),
             _x('Al Qaysariya', 'Jahra', 'ry-wc-city-select'),
             _x('Al Metlaa', 'Jahra', 'ry-wc-city-select'),
-            _x('Al Jahra', 'Jahra', 'ry-wc-city-select'),
+            _x('Al Jahra', 'Jahra', 'ry-wc-city-select')
         ],
         'KUWAIT CITY' => [
             _x('Abdulla Al Salem', 'Kuwait City', 'ry-wc-city-select'),
@@ -145,7 +144,7 @@ return [
             _x('Al Wetiyah', 'Kuwait City', 'ry-wc-city-select'),
             _x('Safat', 'Kuwait City', 'ry-wc-city-select'),
             _x('Salhiya', 'Kuwait City', 'ry-wc-city-select'),
-            _x('Sawaber', 'Kuwait City', 'ry-wc-city-select'),
+            _x('Sawaber', 'Kuwait City', 'ry-wc-city-select')
         ],
         'MUBARAK AL KABEER' => [
             _x('Abu Fateera', 'Mubarak Al Kabeer', 'ry-wc-city-select'),
@@ -159,7 +158,7 @@ return [
             _x('Qusor', 'Mubarak Al Kabeer', 'ry-wc-city-select'),
             _x('Sabah Al Salem', 'Mubarak Al Kabeer', 'ry-wc-city-select'),
             _x('Sabhan', 'Mubarak Al Kabeer', 'ry-wc-city-select'),
-            _x('Masayel', 'Mubarak Al Kabeer', 'ry-wc-city-select'),
+            _x('Masayel', 'Mubarak Al Kabeer', 'ry-wc-city-select')
         ]
     ]
 ];
