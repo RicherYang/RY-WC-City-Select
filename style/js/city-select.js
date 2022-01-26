@@ -72,9 +72,6 @@ jQuery(function ($) {
     }
 
     /* City select boxes */
-    var cities_json = ry_wc_city_select_params.cities.replace(/&quot;/g, '"'),
-        cities = $.parseJSON(cities_json);
-
     $(document.body).on('country_to_state_changing', function (e, country, $container) {
         var $statebox = $container.find('#billing_state, #shipping_state, #calc_shipping_state'),
             state = $statebox.val();
@@ -92,13 +89,11 @@ jQuery(function ($) {
     $(document.body).on('state_changing', function (e, country, state, $container) {
         var $citybox = $container.find('#billing_city, #shipping_city, #calc_shipping_city');
 
-        if (cities[country]) {
+        if (ry_wc_city_select_params.cities[country]) {
             /* if the country has no states */
-            if (cities[country] instanceof Array) {
-                cityToSelect($citybox, cities[country]);
-            } else if (state) {
-                if (cities[country][state]) {
-                    cityToSelect($citybox, cities[country][state]);
+            if (state) {
+                if (ry_wc_city_select_params.cities[country][state]) {
+                    cityToSelect($citybox, ry_wc_city_select_params.cities[country][state]);
                 } else {
                     cityToInput($citybox);
                 }
@@ -115,7 +110,7 @@ jQuery(function ($) {
             $city = $container.find('#billing_city, #shipping_city, #calc_shipping_city'),
             postcode = $city.find(':selected').data('postcode');
 
-        if (typeof postcode !== 'undefined') {
+        if (postcode !== undefined) {
             $container.find('#billing_postcode, #shipping_postcode, #calc_shipping_postcode').val(postcode);
         }
     });

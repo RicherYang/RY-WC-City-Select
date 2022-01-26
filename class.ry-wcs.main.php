@@ -12,7 +12,7 @@ final class RY_CWT
     {
         if (is_null(self::$_instance)) {
             self::$_instance = new self();
-            add_action('init', [self::$_instance, 'do_init']);
+            self::$_instance->do_init();
         }
 
         return self::$_instance;
@@ -31,7 +31,6 @@ final class RY_CWT
         add_filter('woocommerce_rest_prepare_report_customers', [$this, 'set_state_local']);
 
         $this->use_geonames_org = apply_filters('ry_wei_load_geonames_org', false);
-
         if ($this->use_geonames_org) {
             if (!is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
                 if (!function_exists('unzip_file')) {
@@ -45,7 +44,6 @@ final class RY_CWT
                 $this->use_geonames_org = false;
             }
         }
-
         if ($this->use_geonames_org) {
             if (4000000 > ini_get('pcre.backtrack_limit')) {
                 ini_set('pcre.backtrack_limit', '4000000');
@@ -118,8 +116,7 @@ final class RY_CWT
             if ($current_sc && isset($cities[$current_sc])) {
                 $dropdown_cities = $cities[$current_sc];
             } elseif (is_array(reset($cities))) {
-                $dropdown_cities = array_reduce($cities, 'array_merge', array());
-                sort($dropdown_cities);
+                $dropdown_cities = [];
             } else {
                 $dropdown_cities = $cities;
             }
@@ -150,7 +147,7 @@ final class RY_CWT
                 wp_enqueue_script('ry-wc-city-select', RY_WCS_PLUGIN_URL . 'style/js/city-select.js', ['jquery', 'woocommerce'], RY_WCS_VERSION, true);
 
                 wp_localize_script('ry-wc-city-select', 'ry_wc_city_select_params', [
-                    'cities' => json_encode($this->get_cities()),
+                    'cities' => $this->get_cities(),
                     'i18n_select_city_text'=> esc_attr__('Select an option&hellip;', 'woocommerce'),
                 ]);
             }
