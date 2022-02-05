@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
 Requires at least: 5.6
 Requires PHP: 7.4
-Tested up to: 5.8
-Stable tag: 1.0.13
+Tested up to: 5.9
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -73,7 +73,7 @@ The sample file is cities/TW.php and states/TW.php
 
 = Where can I report bugs or contribute to the project? =
 Report bugs on the [GitHub repository](https://github.com/RicherYang/RY-WC-City-Select/issues),
-or my [person website page](https://richer.tw/ry-wc-city-select/).
+or my [person website page](https://ry-plugin.com/ry-wc-city-select).
 
 = All cities list from http://geonames.org/  =
 From the [RY-WC-City-Select-cities-files](https://github.com/sergioxdev/RY-WC-City-Select-cities-files)
@@ -89,6 +89,9 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 1.0.14 - 2022/02/05 =
+* change website link
 
 = 1.0.13 - 2022/01/02 =
 * fix when empty city get error info
