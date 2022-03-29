@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 5.6
 Requires PHP: 7.4
 Tested up to: 5.9
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -39,8 +39,8 @@ add_filter( 'ry_wc_city_select_cities', 'my_cities' );
 function my_cities( $cities ) {
     $cities['XX'] = array(
         'YYY' => array( // city name with postcoe
-            ['City', 100],
-            ['Another City', 101]
+            ['City', '100'],
+            ['Another City', '101']
         ),
         'ZZZ' => array( // just city name
             'City 3',
@@ -90,6 +90,9 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 
 == Changelog ==
 
+= 1.0.15 - 2022/03/29 =
+* chang city zip code to string
+
 = 1.0.14 - 2022/02/05 =
 * change website link
 
@@ -103,7 +106,7 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 * update minimum requirements
 
 = 1.0.10 - 2020/12/09 =
-* checked support new verison 
+* checked support new verison
 
 = 1.0.9 - 2020/04/21 =
 * fix some theme error.
@@ -112,25 +115,25 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 * add geonames.org data in plugin.
 
 = 1.0.7 - 2020/03/14 =
-* add info in readme.txt.
+* add info in readme.txt
 
 = 1.0.6 - 2020/03/14 =
 * add Kuwait states and cities. (thx [Ahmed Safaa](https://github.com/Mello21century))
 
 = 1.0.5 - 2020/03/12 =
-* update Support WooCommerce 4.
+* update Support WooCommerce 4
 
 = 1.0.4 - 2020/02/15 =
-* update WooCommerce tested version.
+* update WooCommerce tested version
 
 = 1.0.3 - 2019/12/10 =
-* fix checkout page city select change error.
+* fix checkout page city select change error
 
 = 1.0.2 - 2019/12/10 =
-* fix Tanwan city i10n error.
+* fix Tanwan city i10n error
 
 = 1.0.1 - 2019/12/09 =
-* fix Tanwan state and city list error.
+* fix Tanwan state and city list error
 
 = 1.0.0 - 2019/12/07 =
-* First release.
+* First release
