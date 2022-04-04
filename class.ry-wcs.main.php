@@ -109,6 +109,7 @@ final class RY_CWT
 
         // Get country cities
         $cities = $this->get_cities($current_cc);
+        $field .= '<span class="woocommerce-input-wrapper">';
         if (is_array($cities)) {
             $field .= '<select name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" class="city_select ' . esc_attr(implode(' ', $args['input_class'])) .'" ' . implode(' ', $custom_attributes) . ' placeholder="' . esc_attr($args['placeholder']) . '">
                 <option value="">'. __('Select an option&hellip;', 'woocommerce') .'</option>';
@@ -130,11 +131,12 @@ final class RY_CWT
         } else {
             $field .= '<input type="text" class="input-text ' . esc_attr(implode(' ', $args['input_class'])) .'" value="' . esc_attr($value) . '" placeholder="' . esc_attr($args['placeholder']) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" ' . implode(' ', $custom_attributes) . ' />';
         }
-
         // field description and close wrapper
         if ($args['description']) {
             $field .= '<span class="description">' . esc_attr($args['description']) . '</span>';
         }
+        $field .= '</span>';
+
         $field .= '</p>' . $after;
 
         return $field;

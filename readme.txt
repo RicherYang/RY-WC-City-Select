@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 5.6
 Requires PHP: 7.4
 Tested up to: 5.9
-Stable tag: 1.0.15
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -90,8 +90,12 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 
 == Changelog ==
 
+= 1.1.0 - 2022/04/04 =
+* postal code clear with selected no postal code city ([issuu #6](https://github.com/RicherYang/RY-WC-City-Select/issues/6))
+* change form field html style more like woocommerce
+
 = 1.0.15 - 2022/03/29 =
-* chang city zip code to string
+* change city zip code to string
 
 = 1.0.14 - 2022/02/05 =
 * change website link

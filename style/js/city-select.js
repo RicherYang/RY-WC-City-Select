@@ -112,6 +112,8 @@ jQuery(function ($) {
 
         if (postcode !== undefined) {
             $container.find('#billing_postcode, #shipping_postcode, #calc_shipping_postcode').val(postcode);
+        } else {
+            $container.find('#billing_postcode, #shipping_postcode, #calc_shipping_postcode').val('');
         }
     });
 
