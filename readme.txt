@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
 Requires at least: 5.6
 Requires PHP: 7.4
-Tested up to: 5.9
-Stable tag: 1.1.0
+Tested up to: 6.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -89,6 +89,9 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 1.1.1 - 2022/06-03 =
+* add Romanian cities. (by condor2)
 
 = 1.1.0 - 2022/04/04 =
 * postal code clear with selected no postal code city ([issuu #6](https://github.com/RicherYang/RY-WC-City-Select/issues/6))
