@@ -1,16 +1,16 @@
 <?php
-final class RY_CWT
+
+final class RY_WCS
 {
     protected $cities;
-
     protected $use_geonames_org;
     protected $geonames_org_path = 'geonames-org-data';
 
     protected static $_instance = null;
 
-    public static function init()
+    public static function instance()
     {
-        if (is_null(self::$_instance)) {
+        if (self::$_instance === null) {
             self::$_instance = new self();
             self::$_instance->do_init();
         }
@@ -18,19 +18,29 @@ final class RY_CWT
         return self::$_instance;
     }
 
-    public function do_init()
+    protected function do_init()
+    {
+        add_action('init', [$this, 'ry_init']);
+    }
+
+    public function ry_init()
     {
         load_plugin_textdomain('ry-wc-city-select', false, plugin_basename(dirname(RY_WCS_PLUGIN_BASENAME)) . '/languages');
+
+        if (!defined('WC_VERSION')) {
+            return;
+        }
+
+        add_action('wp_enqueue_scripts', [$this, 'load_scripts']);
 
         add_filter('woocommerce_billing_fields', [$this, 'billing_fields']);
         add_filter('woocommerce_shipping_fields', [$this, 'shipping_fields']);
         add_filter('woocommerce_form_field_city', [$this, 'form_field_city'], 10, 4);
-        add_action('wp_enqueue_scripts', [$this, 'load_scripts']);
 
         add_filter('woocommerce_states', [$this, 'load_country_states']);
         add_filter('woocommerce_rest_prepare_report_customers', [$this, 'set_state_local']);
 
-        $this->use_geonames_org = apply_filters('ry_wei_load_geonames_org', false);
+        $this->use_geonames_org = apply_filters('ry_wcs_load_geonames_org', false);
         if ($this->use_geonames_org) {
             if (!is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
                 if (!function_exists('unzip_file')) {
@@ -43,11 +53,24 @@ final class RY_CWT
             if (!is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
                 $this->use_geonames_org = false;
             }
-        }
-        if ($this->use_geonames_org) {
-            if (4000000 > ini_get('pcre.backtrack_limit')) {
-                ini_set('pcre.backtrack_limit', '4000000');
+
+            if ($this->use_geonames_org) {
+                if (4000000 > ini_get('pcre.backtrack_limit')) {
+                    ini_set('pcre.backtrack_limit', '4000000');
+                }
             }
+        }
+    }
+
+    public function load_scripts()
+    {
+        if (is_cart() || is_checkout() || is_wc_endpoint_url('edit-address')) {
+            wp_enqueue_script('ry-wc-city-select', RY_WCS_PLUGIN_URL . 'style/js/city-select.js', ['jquery', 'woocommerce'], RY_WCS_VERSION, true);
+
+            wp_localize_script('ry-wc-city-select', 'ry_wc_city_select_params', [
+                'cities' => $this->get_cities(),
+                'i18n_select_city_text'=> esc_attr__('Select an option&hellip;', 'woocommerce'),
+            ]);
         }
     }
 
@@ -142,26 +165,13 @@ final class RY_CWT
         return $field;
     }
 
-    public function load_scripts()
-    {
-        if (defined('WC_VERSION')) {
-            if (is_cart() || is_checkout() || is_wc_endpoint_url('edit-address')) {
-                wp_enqueue_script('ry-wc-city-select', RY_WCS_PLUGIN_URL . 'style/js/city-select.js', ['jquery', 'woocommerce'], RY_WCS_VERSION, true);
-
-                wp_localize_script('ry-wc-city-select', 'ry_wc_city_select_params', [
-                    'cities' => $this->get_cities(),
-                    'i18n_select_city_text'=> esc_attr__('Select an option&hellip;', 'woocommerce'),
-                ]);
-            }
-        }
-    }
-
     protected function i18n_files_path()
     {
         $file_path = RY_WCS_PLUGIN_DIR;
         if ($this->use_geonames_org) {
             $file_path .= $this->geonames_org_path . '/';
         }
+
         return $file_path;
     }
 
@@ -176,6 +186,7 @@ final class RY_CWT
                 }
             }
         }
+
         return $states;
     }
 
@@ -184,6 +195,7 @@ final class RY_CWT
         if (empty($this->cities)) {
             $this->load_country_cities();
         }
+
         if (!is_null($cc)) {
             return isset($this->cities[$cc]) ? $this->cities[$cc] : false;
         } else {
@@ -203,18 +215,21 @@ final class RY_CWT
                 }
             }
         }
+
         $this->cities = apply_filters('ry_wc_city_select_cities', $cities);
     }
 
     public function set_state_local($response)
     {
         static $states;
+
         if (!isset($states[$response->data['country']])) {
             $states[$response->data['country']] = WC()->countries->get_states($response->data['country']);
         }
         if (isset($states[$response->data['country']][$response->data['state']])) {
             $response->data['state'] = $states[$response->data['country']][$response->data['state']];
         }
+
         return $response;
     }
 

@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 5.6
 Requires PHP: 7.4
 Tested up to: 6.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -57,7 +57,7 @@ function my_cities( $cities ) {
 
 * PHP 7.4+
 * WordPress 5.6+
-* WooCommerce 5.0+
+* WooCommerce 6.0+
 
 
 == Frequently Asked Questions ==
@@ -89,6 +89,9 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 1.1.3 - 2023/02/13 =
+* Change main class name.
 
 = 1.1.2 - 2022/07/16 =
 * Change plugin info.

@@ -1,4 +1,5 @@
 <?php
+
 return [
     'KW' => [
         'AHMADI' => __('Ahmadi', 'ry-wc-city-select'),
