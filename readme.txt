@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
 Requires at least: 5.6
 Requires PHP: 7.4
-Tested up to: 6.0
-Stable tag: 1.1.3
+Tested up to: 6.2
+Stable tag: 1.1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -89,6 +89,9 @@ add_filter('ry_wei_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 1.1.3.1 - 2023/03/30 =
+* Change WordPress croe tested version info.
 
 = 1.1.3 - 2023/02/13 =
 * Change main class name.
