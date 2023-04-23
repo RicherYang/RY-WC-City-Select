@@ -40,7 +40,7 @@ final class RY_WCS
         add_filter('woocommerce_states', [$this, 'load_country_states']);
         add_filter('woocommerce_rest_prepare_report_customers', [$this, 'set_state_local']);
 
-        $this->use_geonames_org = apply_filters('ry_wcs_load_geonames_org', false);
+        $this->use_geonames_org = apply_filters('ry_wcs_load_geonames_org', apply_filters('ry_wei_load_geonames_org', false));
         if ($this->use_geonames_org) {
             if (!is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
                 if (!function_exists('unzip_file')) {

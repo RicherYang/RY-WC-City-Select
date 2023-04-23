@@ -6,8 +6,8 @@ Requires at least: 5.6
 Requires PHP: 7.4
 Tested up to: 6.2
 Stable tag: 1.1.3.1
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.txt
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
 Show a dropdown select as the cities input on WooCommerce. Auto set the postcode for selected city.
 
@@ -84,11 +84,14 @@ To enable geonames.org data, add code into you theme functions.php.
 Or use Code Snippets[https://wordpress.org/plugins/code-snippets/] to add code.
 
 `
-add_filter('ry_wei_load_geonames_org', '__return_true');
+add_filter('ry_wcs_load_geonames_org', '__return_true');
 `
 
 
 == Changelog ==
+
+= 2.0.0 - 2023/04/23 =
+* CHANGE License to GPLv3.
 
 = 1.1.3.1 - 2023/03/30 =
 * Change WordPress croe tested version info.
