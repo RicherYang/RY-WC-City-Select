@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 5.6
 Requires PHP: 7.4
 Tested up to: 6.2
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -75,7 +75,7 @@ The sample file is cities/TW.php and states/TW.php
 Report bugs on the [GitHub repository](https://github.com/RicherYang/RY-WC-City-Select/issues),
 or my [person website page](https://ry-plugin.com/ry-wc-city-select).
 
-= All cities list from http://geonames.org/  =
+= All cities list from http://geonames.org/ =
 From the [RY-WC-City-Select-cities-files](https://github.com/sergioxdev/RY-WC-City-Select-cities-files)
 You can add almost main states and cities list in the world.
 But some state or city may use different name with the official name.
@@ -89,6 +89,9 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 2.0.1 - 2023/08/26 =
+* Fixed change city maynot edit the zip code.
 
 = 2.0.0 - 2023/04/23 =
 * CHANGE License to GPLv3.

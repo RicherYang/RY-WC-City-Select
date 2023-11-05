@@ -10,7 +10,7 @@ final class RY_WCS
 
     public static function instance()
     {
-        if (self::$_instance === null) {
+        if (null === self::$_instance) {
             self::$_instance = new self();
             self::$_instance->do_init();
         }
@@ -69,7 +69,7 @@ final class RY_WCS
 
             wp_localize_script('ry-wc-city-select', 'ry_wc_city_select_params', [
                 'cities' => $this->get_cities(),
-                'i18n_select_city_text'=> esc_attr__('Select an option&hellip;', 'woocommerce'),
+                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'woocommerce'),
             ]);
         }
     }
@@ -119,9 +119,9 @@ final class RY_WCS
         }
 
         // field p and label
-        $field = '<p class="form-row ' . esc_attr(implode(' ', $args['class'])) .'" id="' . esc_attr($args['id']) . '_field">';
+        $field = '<p class="form-row ' . esc_attr(implode(' ', $args['class'])) . '" id="' . esc_attr($args['id']) . '_field">';
         if ($args['label']) {
-            $field .= '<label for="' . esc_attr($args['id']) . '" class="' . esc_attr(implode(' ', $args['label_class'])) .'">' . $args['label']. $required . '</label>';
+            $field .= '<label for="' . esc_attr($args['id']) . '" class="' . esc_attr(implode(' ', $args['label_class'])) . '">' . $args['label'] . $required . '</label>';
         }
 
         // Get Country
@@ -134,8 +134,8 @@ final class RY_WCS
         $cities = $this->get_cities($current_cc);
         $field .= '<span class="woocommerce-input-wrapper">';
         if (is_array($cities)) {
-            $field .= '<select name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" class="city_select ' . esc_attr(implode(' ', $args['input_class'])) .'" ' . implode(' ', $custom_attributes) . ' placeholder="' . esc_attr($args['placeholder']) . '">
-                <option value="">'. __('Select an option&hellip;', 'woocommerce') .'</option>';
+            $field .= '<select name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" class="city_select ' . esc_attr(implode(' ', $args['input_class'])) . '" ' . implode(' ', $custom_attributes) . ' placeholder="' . esc_attr($args['placeholder']) . '">
+                <option value="">' . __('Select an option&hellip;', 'woocommerce') . '</option>';
 
             if ($current_sc && isset($cities[$current_sc])) {
                 $dropdown_cities = $cities[$current_sc];
@@ -146,13 +146,19 @@ final class RY_WCS
             }
             foreach ($dropdown_cities as $city_name) {
                 if (is_array($city_name)) {
+                    $option_attr = 'value="' . esc_attr($city_name[0]) . '"';
+                    $option_attr .= ' data-postcode="' . esc_attr($city_name[1]) . '"';
+                    $option_attr .= selected($value, $city_name[0], false);
                     $city_name = $city_name[0];
+                } else {
+                    $option_attr = 'value="' . esc_attr($city_name) . '"';
+                    $option_attr .= selected($value, $city_name, false);
                 }
-                $field .= '<option value="' . esc_attr($city_name) . '" ' . selected($value, $city_name, false) . '>' . $city_name .'</option>';
+                $field .= '<option ' . $option_attr . '>' . esc_html($city_name) . '</option>';
             }
             $field .= '</select>';
         } else {
-            $field .= '<input type="text" class="input-text ' . esc_attr(implode(' ', $args['input_class'])) .'" value="' . esc_attr($value) . '" placeholder="' . esc_attr($args['placeholder']) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" ' . implode(' ', $custom_attributes) . ' />';
+            $field .= '<input type="text" class="input-text ' . esc_attr(implode(' ', $args['input_class'])) . '" value="' . esc_attr($value) . '" placeholder="' . esc_attr($args['placeholder']) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" ' . implode(' ', $custom_attributes) . ' />';
         }
         // field description and close wrapper
         if ($args['description']) {
@@ -233,11 +239,7 @@ final class RY_WCS
         return $response;
     }
 
-    public static function plugin_activation()
-    {
-    }
+    public static function plugin_activation() {}
 
-    public static function plugin_deactivation()
-    {
-    }
+    public static function plugin_deactivation() {}
 }
