@@ -1,11 +1,11 @@
-=== RY WC City Select ===
+=== RY City Select for WooCommerce ===
 Contributors: fantasyworld
 Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
-Requires at least: 5.6
-Requires PHP: 7.4
-Tested up to: 6.2
-Stable tag: 2.0.1
+Requires at least: 6.3
+Requires PHP: 8.0
+Tested up to: 6.4
+Stable tag: 2.1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -55,9 +55,9 @@ function my_cities( $cities ) {
 
 = Minimum Requirements =
 
-* PHP 7.4+
-* WordPress 5.6+
-* WooCommerce 6.0+
+* PHP 8.0+
+* WordPress 6.3+
+* WooCommerce 8.0+
 
 
 == Frequently Asked Questions ==
@@ -89,6 +89,9 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 2.1.0 - 2024/03/022 =
+* CHANGE Plugin name.
 
 = 2.0.1 - 2023/08/26 =
 * Fixed change city maynot edit the zip code.

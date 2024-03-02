@@ -25,7 +25,7 @@ final class RY_WCS
 
     public function ry_init()
     {
-        load_plugin_textdomain('ry-wc-city-select', false, plugin_basename(dirname(RY_WCS_PLUGIN_BASENAME)) . '/languages');
+        load_plugin_textdomain('ry-wc-city-select', false, plugin_basename(dirname(__DIR__)) . '/languages');
 
         if (!defined('WC_VERSION')) {
             return;
@@ -187,8 +187,8 @@ final class RY_WCS
         if ($allowed) {
             $base_path = $this->i18n_files_path();
             foreach ($allowed as $code => $country) {
-                if (file_exists($base_path . 'states/' . $code . '.php')) {
-                    $states = array_merge($states, include($base_path . 'states/' . $code . '.php'));
+                if (file_exists($base_path . 'includes/states/' . $code . '.php')) {
+                    $states = array_merge($states, include($base_path . 'includes/states/' . $code . '.php'));
                 }
             }
         }
@@ -216,8 +216,8 @@ final class RY_WCS
         if ($allowed) {
             $base_path = $this->i18n_files_path();
             foreach ($allowed as $code => $country) {
-                if (file_exists($base_path . 'cities/' . $code . '.php')) {
-                    $cities = array_merge($cities, include($base_path . 'cities/' . $code . '.php'));
+                if (file_exists($base_path . 'includes/cities/' . $code . '.php')) {
+                    $cities = array_merge($cities, include($base_path . 'includes/cities/' . $code . '.php'));
                 }
             }
         }
