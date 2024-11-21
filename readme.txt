@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.7
-Stable tag: 2.1.0
+Stable tag: 2.1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -90,7 +90,7 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 == Changelog ==
 
-= 2.1.1 - 2024/11/21 =
+= 2.1.2 - 2024/11/21 =
 * Change WordPress croe required / tested version info.
 * Change PHP required version info.
 
