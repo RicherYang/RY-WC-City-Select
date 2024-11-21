@@ -2,11 +2,13 @@
 
 final class RY_WCS
 {
-    protected $cities;
-    protected $use_geonames_org;
-    protected $geonames_org_path = 'geonames-org-data';
-
     protected static $_instance = null;
+
+    protected $cities;
+
+    protected $use_geonames_org;
+
+    protected $geonames_org_path = 'geonames-org-data';
 
     public static function instance()
     {
@@ -18,19 +20,15 @@ final class RY_WCS
         return self::$_instance;
     }
 
-    protected function do_init()
-    {
-        add_action('init', [$this, 'ry_init']);
-    }
-
-    public function ry_init()
+    protected function do_init(): void
     {
         load_plugin_textdomain('ry-wc-city-select', false, plugin_basename(dirname(__DIR__)) . '/languages');
 
-        if (!defined('WC_VERSION')) {
-            return;
-        }
+        add_action('woocommerce_init', [$this, 'do_woo_init']);
+    }
 
+    public function do_woo_init(): void
+    {
         add_action('wp_enqueue_scripts', [$this, 'load_scripts']);
 
         add_filter('woocommerce_billing_fields', [$this, 'billing_fields']);
@@ -203,7 +201,7 @@ final class RY_WCS
         }
 
         if (!is_null($cc)) {
-            return isset($this->cities[$cc]) ? $this->cities[$cc] : false;
+            return $this->cities[$cc] ?? false;
         } else {
             return $this->cities;
         }

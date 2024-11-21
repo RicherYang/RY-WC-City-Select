@@ -2,9 +2,9 @@
 Contributors: fantasyworld
 Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
-Requires at least: 6.3
+Requires at least: 6.5
 Requires PHP: 8.0
-Tested up to: 6.4
+Tested up to: 6.7
 Stable tag: 2.1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
@@ -56,7 +56,7 @@ function my_cities( $cities ) {
 = Minimum Requirements =
 
 * PHP 8.0+
-* WordPress 6.3+
+* WordPress 6.5+
 * WooCommerce 8.0+
 
 
@@ -89,6 +89,10 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 2.1.1 - 2024/11/21 =
+* Change WordPress croe required / tested version info.
+* Change PHP required version info.
 
 = 2.1.0 - 2024/03/022 =
 * CHANGE Plugin name.
