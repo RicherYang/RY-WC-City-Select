@@ -8,5 +8,5 @@ return [
         'JAHRA' => __('Jahra', 'ry-wc-city-select'),
         'KUWAIT CITY' => __('Kuwait City', 'ry-wc-city-select'),
         'MUBARAK AL KABEER' => __('Mubarak Al Kabeer', 'ry-wc-city-select'),
-    ]
+    ],
 ];

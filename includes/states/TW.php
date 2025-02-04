@@ -23,6 +23,6 @@ return [
         'TAITUNG COUNTY' => __('Taitung County', 'ry-wc-city-select'),
         'PENGHU COUNTY' => __('Penghu County', 'ry-wc-city-select'),
         'KINMEN COUNTY' => __('Kinmen County', 'ry-wc-city-select'),
-        'LIENCHIANG COUNTY' => __('Lienchiang County', 'ry-wc-city-select')
-    ]
+        'LIENCHIANG COUNTY' => __('Lienchiang County', 'ry-wc-city-select'),
+    ],
 ];

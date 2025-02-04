@@ -54,7 +54,7 @@ final class RY_WCS
 
             if ($this->use_geonames_org) {
                 if (4000000 > ini_get('pcre.backtrack_limit')) {
-                    ini_set('pcre.backtrack_limit', '4000000');
+                    @ini_set('pcre.backtrack_limit', '4000000');
                 }
             }
         }
@@ -67,7 +67,7 @@ final class RY_WCS
 
             wp_localize_script('ry-wc-city-select', 'ry_wc_city_select_params', [
                 'cities' => $this->get_cities(),
-                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'woocommerce'),
+                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'ry-wc-city-select'),
             ]);
         }
     }
@@ -96,7 +96,7 @@ final class RY_WCS
         // Required markup
         if ($args['required']) {
             $args['class'][] = 'validate-required';
-            $required = ' <abbr class="required" title="' . esc_attr__('required', 'woocommerce') . '">*</abbr>';
+            $required = ' <abbr class="required" title="' . esc_attr__('required', 'ry-wc-city-select') . '">*</abbr>';
         } else {
             $required = '';
         }
@@ -133,7 +133,7 @@ final class RY_WCS
         $field .= '<span class="woocommerce-input-wrapper">';
         if (is_array($cities)) {
             $field .= '<select name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '" class="city_select ' . esc_attr(implode(' ', $args['input_class'])) . '" ' . implode(' ', $custom_attributes) . ' placeholder="' . esc_attr($args['placeholder']) . '">
-                <option value="">' . __('Select an option&hellip;', 'woocommerce') . '</option>';
+                <option value="">' . __('Select an option&hellip;', 'ry-wc-city-select') . '</option>';
 
             if ($current_sc && isset($cities[$current_sc])) {
                 $dropdown_cities = $cities[$current_sc];
