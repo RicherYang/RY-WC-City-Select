@@ -12,7 +12,7 @@ final class RY_WCS
 
     public static function instance()
     {
-        if (null === self::$_instance) {
+        if (self::$_instance === null) {
             self::$_instance = new self();
             self::$_instance->do_init();
         }
@@ -38,24 +38,30 @@ final class RY_WCS
         add_filter('woocommerce_states', [$this, 'load_country_states']);
         add_filter('woocommerce_rest_prepare_report_customers', [$this, 'set_state_local']);
 
-        $this->use_geonames_org = apply_filters('ry_wcs_load_geonames_org', apply_filters('ry_wei_load_geonames_org', false));
+        $this->use_geonames_org = apply_filters('ry_wcs_load_geonames_org', true);
         if ($this->use_geonames_org) {
-            if (!is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
-                if (!function_exists('unzip_file')) {
-                    require_once ABSPATH . 'wp-admin/includes/file.php';
-                    WP_Filesystem();
+            $info_exist = is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path);
+            if ($info_exist === true) {
+                if (is_file(RY_WCS_PLUGIN_DIR . $this->geonames_org_path . '/version.php')) {
+                    $version = include RY_WCS_PLUGIN_DIR . $this->geonames_org_path . '/version.php';
+                    if ($version !== '2025.2.4') {
+                        $info_exist = false;
+                    }
+                } else {
+                    $info_exist = false;
                 }
-
-                unzip_file(RY_WCS_PLUGIN_DIR . $this->geonames_org_path . '.zip', RY_WCS_PLUGIN_DIR);
-            }
-            if (!is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
-                $this->use_geonames_org = false;
             }
 
-            if ($this->use_geonames_org) {
+            if ($info_exist === false) {
+                $this->download_zip();
+            }
+
+            if (is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
                 if (4000000 > ini_get('pcre.backtrack_limit')) {
                     @ini_set('pcre.backtrack_limit', '4000000');
                 }
+            } else {
+                $this->use_geonames_org = false;
             }
         }
     }
@@ -123,9 +129,9 @@ final class RY_WCS
         }
 
         // Get Country
-        $country_key = $key == 'billing_city' ? 'billing_country' : 'shipping_country';
+        $country_key = $key === 'billing_city' ? 'billing_country' : 'shipping_country';
         $current_cc = WC()->checkout->get_value($country_key);
-        $state_key = $key == 'billing_city' ? 'billing_state' : 'shipping_state';
+        $state_key = $key === 'billing_city' ? 'billing_state' : 'shipping_state';
         $current_sc = WC()->checkout->get_value($state_key);
 
         // Get country cities
@@ -171,9 +177,9 @@ final class RY_WCS
 
     protected function i18n_files_path()
     {
-        $file_path = RY_WCS_PLUGIN_DIR;
+        $file_path = [RY_WCS_PLUGIN_DIR];
         if ($this->use_geonames_org) {
-            $file_path .= $this->geonames_org_path . '/';
+            $file_path[] = RY_WCS_PLUGIN_DIR . $this->geonames_org_path . '/';
         }
 
         return $file_path;
@@ -183,10 +189,12 @@ final class RY_WCS
     {
         $allowed = array_merge(WC()->countries->get_allowed_countries(), WC()->countries->get_shipping_countries());
         if ($allowed) {
-            $base_path = $this->i18n_files_path();
+            $base_path_list = $this->i18n_files_path();
             foreach ($allowed as $code => $country) {
-                if (file_exists($base_path . 'includes/states/' . $code . '.php')) {
-                    $states = array_merge($states, include($base_path . 'includes/states/' . $code . '.php'));
+                foreach ($base_path_list as $base_path) {
+                    if (file_exists($base_path . 'includes/states/' . $code . '.php')) {
+                        $states = array_merge($states, include($base_path . 'includes/states/' . $code . '.php'));
+                    }
                 }
             }
         }
@@ -212,10 +220,12 @@ final class RY_WCS
         $cities = [];
         $allowed = array_merge(WC()->countries->get_allowed_countries(), WC()->countries->get_shipping_countries());
         if ($allowed) {
-            $base_path = $this->i18n_files_path();
+            $base_path_list = $this->i18n_files_path();
             foreach ($allowed as $code => $country) {
-                if (file_exists($base_path . 'includes/cities/' . $code . '.php')) {
-                    $cities = array_merge($cities, include($base_path . 'includes/cities/' . $code . '.php'));
+                foreach ($base_path_list as $base_path) {
+                    if (file_exists($base_path . 'includes/cities/' . $code . '.php')) {
+                        $cities = array_merge($cities, include($base_path . 'includes/cities/' . $code . '.php'));
+                    }
                 }
             }
         }
@@ -235,6 +245,27 @@ final class RY_WCS
         }
 
         return $response;
+    }
+
+    protected function download_zip()
+    {
+        global $wp_filesystem;
+
+        if (!function_exists('unzip_file')) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+            WP_Filesystem();
+        }
+
+        $download_file = download_url('https://ry-plugin.com/wp-content/uploads/2025/02/geonames-org-data.2024.2.4.zip');
+        if (!is_wp_error($download_file)) {
+            if (sha1_file($download_file) === '7955ac7fe48b7eebd9d99fd89dab52f1a76cb5fb') {
+                if (is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
+                    $wp_filesystem->delete(RY_WCS_PLUGIN_DIR . $this->geonames_org_path, true);
+                }
+
+                unzip_file($download_file, RY_WCS_PLUGIN_DIR);
+            }
+        }
     }
 
     public static function plugin_activation() {}
