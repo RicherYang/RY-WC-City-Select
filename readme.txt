@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.7
-Stable tag: 2.1.4
+Stable tag: 2.1.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -89,6 +89,12 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 2.1.6 - 2025/02/07 =
+* Update language .pot file.
+
+= 2.1.5 - 2025/02/07 =
+* Fixed the error default setting.
 
 = 2.1.4 - 2025/02/04 =
 * Update postal code for Romania state Sibiu ([#9](https://github.com/RicherYang/RY-WC-City-Select/issues/9)).

@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 jQuery(function ($) {
     // ry_wc_city_select_params is required to continue, ensure the object exists
     // wc_country_select_params is used for selectWoo texts. This one is added by WC

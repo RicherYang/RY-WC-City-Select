@@ -29,6 +29,8 @@ final class RY_WCS
 
     public function do_woo_init(): void
     {
+        global $wp_filesystem;
+
         add_action('wp_enqueue_scripts', [$this, 'load_scripts']);
 
         add_filter('woocommerce_billing_fields', [$this, 'billing_fields']);
@@ -38,7 +40,7 @@ final class RY_WCS
         add_filter('woocommerce_states', [$this, 'load_country_states']);
         add_filter('woocommerce_rest_prepare_report_customers', [$this, 'set_state_local']);
 
-        $this->use_geonames_org = apply_filters('ry_wcs_load_geonames_org', true);
+        $this->use_geonames_org = apply_filters('ry_wcs_load_geonames_org', false);
         if ($this->use_geonames_org) {
             $info_exist = is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path);
             if ($info_exist === true) {
@@ -63,17 +65,24 @@ final class RY_WCS
             } else {
                 $this->use_geonames_org = false;
             }
+        } else {
+            if (is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
+                require_once ABSPATH . 'wp-admin/includes/file.php';
+                WP_Filesystem();
+                $wp_filesystem->delete(RY_WCS_PLUGIN_DIR . $this->geonames_org_path, true);
+            }
         }
     }
 
     public function load_scripts()
     {
         if (is_cart() || is_checkout() || is_wc_endpoint_url('edit-address')) {
-            wp_enqueue_script('ry-wc-city-select', RY_WCS_PLUGIN_URL . 'style/js/city-select.js', ['jquery', 'woocommerce'], RY_WCS_VERSION, true);
+            $asset_info = include RY_WCS_PLUGIN_DIR . 'assets/ry-city-select.asset.php';
+            wp_enqueue_script('ry-city-select', RY_WCS_PLUGIN_URL . 'assets/ry-city-select.js', array_merge($asset_info['dependencies'], ['woocommerce']), $asset_info['version'], true);
 
-            wp_localize_script('ry-wc-city-select', 'ry_wc_city_select_params', [
+            wp_localize_script('ry-city-select', 'ry_wc_city_select_params', [
                 'cities' => $this->get_cities(),
-                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'ry-wc-city-select'),
+                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'ry-city-select'),
             ]);
         }
     }
