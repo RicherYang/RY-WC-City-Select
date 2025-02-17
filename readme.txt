@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.7
-Stable tag: 2.1.7
+Stable tag: 2.1.8
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -90,7 +90,7 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 == Changelog ==
 
-= 2.1.7 - 2025/02/17 =
+= 2.1.8 - 2025/02/17 =
 * Fixed error text-domain.
 * Smaller cities name list file.
 
