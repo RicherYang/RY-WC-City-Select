@@ -82,7 +82,7 @@ final class RY_WCS
 
             wp_localize_script('ry-city-select', 'ry_wc_city_select_params', [
                 'cities' => $this->get_cities(),
-                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'ry-city-select'),
+                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'ry-wc-city-select'),
             ]);
         }
     }

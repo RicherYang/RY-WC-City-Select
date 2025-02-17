@@ -108,7 +108,6 @@ return [
             _x('Al Salmi', 'KW Jahra', 'ry-wc-city-select'),
             _x('Al Qaysariya', 'KW Jahra', 'ry-wc-city-select'),
             _x('Al Metlaa', 'KW Jahra', 'ry-wc-city-select'),
-            _x('Al Jahra', 'KW Jahra', 'ry-wc-city-select'),
         ],
         'KUWAIT CITY' => [
             _x('Abdulla Al Salem', 'KW Kuwait City', 'ry-wc-city-select'),
