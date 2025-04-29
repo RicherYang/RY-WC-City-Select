@@ -60,7 +60,7 @@ final class RY_WCS
 
             if (is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
                 if (4000000 > ini_get('pcre.backtrack_limit')) {
-                    @ini_set('pcre.backtrack_limit', '4000000');
+                    @ini_set('pcre.backtrack_limit', '4000000'); // phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
                 }
             } else {
                 $this->use_geonames_org = false;
