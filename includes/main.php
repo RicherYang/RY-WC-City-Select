@@ -22,7 +22,7 @@ final class RY_WCS
 
     protected function do_init(): void
     {
-        load_plugin_textdomain('ry-wc-city-select', false, plugin_basename(dirname(__DIR__)) . '/languages');
+        load_plugin_textdomain('ry-wc-city-select', false, RY_WCS_PLUGIN_LANGUAGES_DIR);
 
         add_action('woocommerce_init', [$this, 'do_woo_init']);
     }
@@ -82,7 +82,6 @@ final class RY_WCS
 
             wp_localize_script('ry-city-select', 'ry_wc_city_select_params', [
                 'cities' => $this->get_cities(),
-                'i18n_select_city_text' => esc_attr__('Select an option&hellip;', 'ry-wc-city-select'),
             ]);
         }
     }
@@ -111,9 +110,9 @@ final class RY_WCS
         // Required markup
         if ($args['required']) {
             $args['class'][] = 'validate-required';
-            $required = ' <abbr class="required" title="' . esc_attr__('required', 'ry-wc-city-select') . '">*</abbr>';
+            $required_indicator = '&nbsp;<span class="required" aria-hidden="true">*</span>';
         } else {
-            $required = '';
+            $required_indicator = '';
         }
 
         // Custom attribute handling
@@ -134,7 +133,7 @@ final class RY_WCS
         // field p and label
         $field = '<p class="form-row ' . esc_attr(implode(' ', $args['class'])) . '" id="' . esc_attr($args['id']) . '_field">';
         if ($args['label']) {
-            $field .= '<label for="' . esc_attr($args['id']) . '" class="' . esc_attr(implode(' ', $args['label_class'])) . '">' . $args['label'] . $required . '</label>';
+            $field .= '<label for="' . esc_attr($args['id']) . '" class="' . esc_attr(implode(' ', $args['label_class'])) . '">' . $args['label'] . $required_indicator . '</label>';
         }
 
         // Get Country

@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 6.6
 Requires PHP: 8.0
 Tested up to: 6.8
-Stable tag: 2.1.9
+Stable tag: 2.1.11
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -89,6 +89,13 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 2.1.11 - 2025/12/07=
+* Fixed - When country change maybe set error city info.
+
+= 2.1.10 - 2025/12/06 =
+* Change - when user change state auto-select first city.
+* Change - city required info to WooCommerce (Version 10.3) html tage style.
 
 = 2.1.9 - 2025/04/29 =
 * Change minimum requires to WordPress 6.6

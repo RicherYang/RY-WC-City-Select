@@ -4930,5 +4930,5 @@ return [
             [_x('Vultureni', 'RO Cluj', 'ry-wc-city-select'), 407595],
             [_x('Zorenii de Vale', 'RO Cluj', 'ry-wc-city-select'), 407429],
         ],
-    ]
+    ],
 ];

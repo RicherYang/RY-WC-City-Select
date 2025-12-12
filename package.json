@@ -1,13 +1,14 @@
 {
     "name": "ry-wc-city-select",
     "title": "RY Tools for WooCommerce",
-    "version": "2.1.9",
+    "version": "2.1.11",
     "author": "Richer Yang",
     "private": true,
     "devDependencies": {
         "react": "^18.0.0",
-        "@wordpress/i18n": "^5.19.0",
-        "@wordpress/scripts": "^30.12.0"
+        "clean-webpack-plugin": "^4.0.0",
+        "@wordpress/i18n": "^6.9.0",
+        "@wordpress/scripts": "^31.1.0"
     },
     "scripts": {
         "start": "wp-scripts start",

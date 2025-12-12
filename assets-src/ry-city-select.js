@@ -9,25 +9,22 @@ jQuery(function ($) {
 
     // Select2 Enhancement if it exists
     if ($().selectWoo) {
-        var getEnhancedSelectFormatString = function () {
+        const getEnhancedSelectFormatString = function () {
             return {
                 'language': {
                     errorLoading: function () {
-                        // Workaround for https://github.com/select2/select2/issues/4355 instead of i18n_ajax_error.
                         return wc_country_select_params.i18n_searching;
                     },
                     inputTooLong: function (args) {
-                        var overChars = args.input.length - args.maximum;
-
-                        if (1 === overChars) {
+                        const overChars = args.input.length - args.maximum;
+                        if (overChars === 1) {
                             return wc_country_select_params.i18n_input_too_long_1;
                         }
                         return wc_country_select_params.i18n_input_too_long_n.replace('%qty%', overChars);
                     },
                     inputTooShort: function (args) {
-                        var remainingChars = args.minimum - args.input.length;
-
-                        if (1 === remainingChars) {
+                        const remainingChars = args.minimum - args.input.length;
+                        if (remainingChars === 1) {
                             return wc_country_select_params.i18n_input_too_short_1;
                         }
                         return wc_country_select_params.i18n_input_too_short_n.replace('%qty%', remainingChars);
@@ -51,48 +48,47 @@ jQuery(function ($) {
             };
         };
 
-        var wc_city_select_select2 = function () {
+        const wc_city_select_select2 = function () {
             $('select.city_select:visible').each(function () {
-                var select2_args = $.extend({
+                const select2Args = $.extend({
                     placeholder: $(this).attr('data-placeholder') || $(this).attr('placeholder') || '',
                     width: '100%'
                 }, getEnhancedSelectFormatString());
 
                 $(this)
                     .on('select2:select', function () {
-                        $(this).focus(); // Maintain focus after select https://github.com/select2/select2/issues/4384
+                        $(this).trigger('focus');
                     })
-                    .selectWoo(select2_args);
+                    .selectWoo(select2Args);
             });
         };
 
         wc_city_select_select2();
 
-        $(document.body).bind('city_to_select', function () {
+        $(document.body).on('city_to_select', function () {
             wc_city_select_select2();
         });
     }
 
     /* City select boxes */
     $(document.body).on('country_to_state_changing', function (e, country, $container) {
-        var $statebox = $container.find('#billing_state, #shipping_state, #calc_shipping_state'),
-            state = $statebox.val();
+        const $statebox = $container.find('#billing_state, #shipping_state, #calc_shipping_state');
+        const state = $statebox.val();
         $(document.body).trigger('state_changing', [country, state, $container]);
     });
 
     $(document.body).on('change', 'select.state_select, #calc_shipping_state', function () {
-        var $container = $(this).closest('.form-row').parent(),
-            country = $container.find('#billing_country, #shipping_country, #calc_shipping_country').val(),
-            state = $(this).val();
+        const $container = $(this).closest('.form-row').parent();
+        const country = $container.find('#billing_country, #shipping_country, #calc_shipping_country').val();
+        const state = $(this).val();
 
         $(document.body).trigger('state_changing', [country, state, $container]);
     });
 
     $(document.body).on('state_changing', function (e, country, state, $container) {
-        var $citybox = $container.find('#billing_city, #shipping_city, #calc_shipping_city');
+        const $citybox = $container.find('#billing_city, #shipping_city, #calc_shipping_city');
 
         if (ry_wc_city_select_params.cities[country]) {
-            /* if the country has no states */
             if (state) {
                 if (ry_wc_city_select_params.cities[country][state]) {
                     cityToSelect($citybox, ry_wc_city_select_params.cities[country][state]);
@@ -100,7 +96,7 @@ jQuery(function ($) {
                     cityToInput($citybox);
                 }
             } else {
-                disableCity($citybox);
+                cityToInput($citybox);
             }
         } else {
             cityToInput($citybox);
@@ -108,9 +104,9 @@ jQuery(function ($) {
     });
 
     $(document.body).on('change', 'select.city_select', function () {
-        var $container = $(this).closest('.form-row').parent(),
-            $city = $container.find('#billing_city, #shipping_city, #calc_shipping_city'),
-            postcode = $city.find(':selected').data('postcode');
+        const $container = $(this).closest('.form-row').parent();
+        const $city = $container.find('#billing_city, #shipping_city, #calc_shipping_city');
+        const postcode = $city.find(':selected').data('postcode');
 
         if (postcode !== undefined) {
             $container.find('#billing_postcode, #shipping_postcode, #calc_shipping_postcode').val(postcode);
@@ -121,10 +117,12 @@ jQuery(function ($) {
 
     /* Ajax replaces .cart_totals (child of .cart-collaterals) on shipping calculator */
     if ($('.cart-collaterals').length && $('#calc_shipping_state').length) {
-        var calc_observer = new MutationObserver(function () {
-            $('#calc_shipping_state').change();
+        const calcObserver = new MutationObserver(function () {
+            $('#calc_shipping_state').trigger('change');
         });
-        calc_observer.observe(document.querySelector('.cart-collaterals'), { childList: true });
+        calcObserver.observe(document.querySelector('.cart-collaterals'), {
+            childList: true
+        });
     }
 
     function cityToInput($citybox) {
@@ -133,60 +131,59 @@ jQuery(function ($) {
             return;
         }
 
-        var input_name = $citybox.attr('name'),
-            input_id = $citybox.attr('id'),
-            placeholder = $citybox.attr('placeholder'),
-            $newcity = $('<input type="text" />')
-                .prop('id', input_id)
-                .prop('name', input_name)
-                .prop('placeholder', placeholder)
-                .addClass('input-text');
+        const inputName = $citybox.attr('name');
+        const inputID = $citybox.attr('id');
+        const placeholder = $citybox.attr('placeholder');
+        const $newcity = $('<input type="text">');
+
+        $newcity.prop('id', inputID)
+            .prop('name', inputName)
+            .prop('placeholder', placeholder)
+            .addClass('input-text');
 
         $citybox.parent().find('.select2-container').remove();
         $citybox.replaceWith($newcity);
 
-        $('#' + input_id).closest('.form-row').parent()
+        $('#' + inputID).closest('.form-row').parent()
             .find('#billing_postcode, #shipping_postcode, #calc_shipping_postcode')
             .val('');
     }
 
     function disableCity($citybox) {
-        $citybox.val('').change();
+        $citybox.val('').trigger('change');
         $citybox.prop('disabled', true);
     }
 
-    function cityToSelect($citybox, current_cities) {
-        var value = $citybox.val();
+    function cityToSelect($citybox, currentCities) {
+        const value = $citybox.val();
 
         if ($citybox.is('input')) {
-            var input_name = $citybox.attr('name'),
-                input_id = $citybox.attr('id'),
-                placeholder = $citybox.attr('placeholder'),
-                $newcity = $('<select></select>')
-                    .prop('id', input_id)
-                    .prop('name', input_name)
-                    .data('placeholder', placeholder)
-                    .addClass('city_select');
+            const inputName = $citybox.attr('name');
+            const inputID = $citybox.attr('id');
+            const placeholder = $citybox.attr('placeholder');
+            const $newcity = $('<select></select>');
+
+            $newcity.prop('id', inputID)
+                .prop('name', inputName)
+                .data('placeholder', placeholder)
+                .addClass('city_select');
 
             $citybox.replaceWith($newcity);
-            $citybox = $('#' + input_id);
+            $citybox = $('#' + inputID);
         } else {
             $citybox.prop('disabled', false);
         }
 
-        var $defaultOption = $('<option></option>')
-            .attr('value', '')
-            .text(ry_wc_city_select_params.i18n_select_city_text);
-        $citybox.empty().append($defaultOption);
-
-        for (var index in current_cities) {
-            if (current_cities.hasOwnProperty(index)) {
-                var $option = $('<option></option>');
-                if (current_cities[index] instanceof Array) {
-                    var cityName = current_cities[index][0];
-                    $option.attr('data-postcode', current_cities[index][1]);
+        $citybox.empty();
+        for (const index in currentCities) {
+            if (currentCities.hasOwnProperty(index)) {
+                const $option = $('<option></option>');
+                let cityName;
+                if (currentCities[index] instanceof Array) {
+                    cityName = currentCities[index][0];
+                    $option.attr('data-postcode', currentCities[index][1]);
                 } else {
-                    var cityName = current_cities[index];
+                    cityName = currentCities[index];
                 }
                 $option.prop('value', cityName)
                     .text(cityName);
@@ -194,11 +191,13 @@ jQuery(function ($) {
             }
         }
 
-        if ($('option[value="' + value + '"]', $citybox).length) {
-            $citybox.val(value).change();
+        let $citySelected = $citybox.find('option[value="' + value + '"]');
+        if ($citySelected.length) {
+            $citySelected.prop('selected', true);
         } else {
-            $citybox.val('').change();
+            $citybox.find('option:first').prop('selected', true);
         }
+        $citybox.trigger('change');
 
         $(document.body).trigger('city_to_select');
     }

@@ -4,8 +4,8 @@
  * Plugin Name: RY City Select for WooCommerce
  * Plugin URI: https://ry-plugin.com/ry-wc-city-select
  * Description: Show a dropdown select as the cities input on WooCommerce. Auto set the postcode for selected city.
- * Version: 2.1.9
- * Requires at least: 6.6
+ * Version: 2.1.11
+ * Requires at least: 6.7
  * Requires PHP: 8.0
  * Author: Richer Yang
  * Author URI: https://richer.tw/
@@ -14,13 +14,11 @@
  *
  * Text Domain: ry-wc-city-select
  * Domain Path: /languages
- *
- * WC requires at least: 8
 */
 
 function_exists('plugin_dir_url') or exit('No direct script access allowed');
 
-define('RY_WCS_VERSION', '2.1.9');
+define('RY_WCS_VERSION', '2.1.11');
 define('RY_WCS_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('RY_WCS_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('RY_WCS_PLUGIN_BASENAME', plugin_basename(__FILE__));

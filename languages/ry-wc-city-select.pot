@@ -2,16 +2,16 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: RY City Select for WooCommerce 2.1.9\n"
+"Project-Id-Version: RY City Select for WooCommerce 2.1.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ry-wc-city-select\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-29T12:21:07+08:00\n"
+"POT-Creation-Date: 2025-12-12T10:57:08+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ry-wc-city-select\n"
 
 #. Plugin Name of the plugin
@@ -71877,13 +71877,8 @@ msgctxt "TW Hualien County"
 msgid "Fuli Township"
 msgstr ""
 
-#: includes/main.php:85
-#: includes/main.php:151
+#: includes/main.php:150
 msgid "Select an option&hellip;"
-msgstr ""
-
-#: includes/main.php:114
-msgid "required"
 msgstr ""
 
 #: includes/states/KW.php:5
