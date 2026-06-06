@@ -1,5 +1,7 @@
 <?php
 
+defined('ABSPATH') or exit;
+
 return [
     'RO' => [
         'AB' => [

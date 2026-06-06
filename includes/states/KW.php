@@ -1,5 +1,7 @@
 <?php
 
+defined('ABSPATH') or exit;
+
 return [
     'KW' => [
         'AHMADI' => __('Ahmadi', 'ry-wc-city-select'),

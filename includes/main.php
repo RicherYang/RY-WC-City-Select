@@ -1,8 +1,10 @@
 <?php
 
+defined('ABSPATH') or exit;
+
 final class RY_WCS
 {
-    protected static $_instance = null;
+    protected static ?self $_instance = null;
 
     protected $cities;
 
@@ -22,8 +24,6 @@ final class RY_WCS
 
     protected function do_init(): void
     {
-        load_plugin_textdomain('ry-wc-city-select', false, RY_WCS_PLUGIN_LANGUAGES_DIR);
-
         add_action('woocommerce_init', [$this, 'do_woo_init']);
     }
 
