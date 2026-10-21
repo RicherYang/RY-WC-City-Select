@@ -4,8 +4,8 @@ Donate link: https://www.paypal.me/RicherYang
 Tags: woocommerce, city, select, dropdown
 Requires at least: 6.8
 Requires PHP: 8.2
-Tested up to: 7.0
-Stable tag: 2.2.0
+Tested up to: 7.1
+Stable tag: 2.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -89,6 +89,9 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 2.3.0 - 2026/10/21 =
+* Change - Not auto selected the first city option.
 
 = 2.2.0 - 2026/06/06 =
 * Update minimum requirements for WordPress and PHP.

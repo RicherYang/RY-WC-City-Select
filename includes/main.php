@@ -4,7 +4,7 @@ defined('ABSPATH') or exit;
 
 final class RY_WCS
 {
-    protected static ?self $_instance = null;
+    private static ?self $_instance = null;
 
     protected $cities;
 
@@ -60,7 +60,7 @@ final class RY_WCS
 
             if (is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {
                 if (4000000 > ini_get('pcre.backtrack_limit')) {
-                    @ini_set('pcre.backtrack_limit', '4000000'); // phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
+                    @ini_set('pcre.backtrack_limit', '4000000');
                 }
             } else {
                 $this->use_geonames_org = false;
@@ -80,7 +80,8 @@ final class RY_WCS
             $asset_info = include RY_WCS_PLUGIN_DIR . 'assets/ry-city-select.asset.php';
             wp_enqueue_script('ry-city-select', RY_WCS_PLUGIN_URL . 'assets/ry-city-select.js', array_merge($asset_info['dependencies'], ['woocommerce']), $asset_info['version'], true);
 
-            wp_localize_script('ry-city-select', 'ry_wc_city_select_params', [
+            wp_localize_script('ry-city-select', 'RyCitySelectParams', [
+                'defaultText' => __('Select an option&hellip;', 'ry-wc-city-select'),
                 'cities' => $this->get_cities(),
             ]);
         }
@@ -276,7 +277,7 @@ final class RY_WCS
         }
     }
 
-    public static function plugin_activation() {}
+    public static function plugin_activation(): void {}
 
-    public static function plugin_deactivation() {}
+    public static function plugin_deactivation(): void {}
 }

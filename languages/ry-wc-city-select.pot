@@ -2,14 +2,13 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: RY City Select for WooCommerce 2.2.0\n"
+"Project-Id-Version: RY City Select for WooCommerce 2.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ry-wc-city-select\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-06T12:27:36+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ry-wc-city-select\n"
@@ -71877,7 +71876,8 @@ msgctxt "TW Hualien County"
 msgid "Fuli Township"
 msgstr ""
 
-#: includes/main.php:150
+#: includes/main.php:84
+#: includes/main.php:151
 msgid "Select an option&hellip;"
 msgstr ""
 

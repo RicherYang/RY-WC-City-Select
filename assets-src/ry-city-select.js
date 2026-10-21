@@ -1,9 +1,9 @@
 import $ from 'jquery';
 
 jQuery(function ($) {
-    // ry_wc_city_select_params is required to continue, ensure the object exists
+    // RyCitySelectParams is required to continue, ensure the object exists
     // wc_country_select_params is used for selectWoo texts. This one is added by WC
-    if (typeof wc_country_select_params === 'undefined' || typeof ry_wc_city_select_params === 'undefined') {
+    if (typeof wc_country_select_params === 'undefined' || typeof RyCitySelectParams === 'undefined') {
         return false;
     }
 
@@ -88,10 +88,10 @@ jQuery(function ($) {
     $(document.body).on('state_changing', function (e, country, state, $container) {
         const $citybox = $container.find('#billing_city, #shipping_city, #calc_shipping_city');
 
-        if (ry_wc_city_select_params.cities[country]) {
+        if (RyCitySelectParams.cities[country]) {
             if (state) {
-                if (ry_wc_city_select_params.cities[country][state]) {
-                    cityToSelect($citybox, ry_wc_city_select_params.cities[country][state]);
+                if (RyCitySelectParams.cities[country][state]) {
+                    cityToSelect($citybox, RyCitySelectParams.cities[country][state]);
                 } else {
                     cityToInput($citybox);
                 }
@@ -149,11 +149,6 @@ jQuery(function ($) {
             .val('');
     }
 
-    function disableCity($citybox) {
-        $citybox.val('').trigger('change');
-        $citybox.prop('disabled', true);
-    }
-
     function cityToSelect($citybox, currentCities) {
         const value = $citybox.val();
 
@@ -175,23 +170,24 @@ jQuery(function ($) {
         }
 
         $citybox.empty();
+        $citybox.append(new Option(RyCitySelectParams.select, ''));
         for (const index in currentCities) {
             if (currentCities.hasOwnProperty(index)) {
-                const $option = $('<option></option>');
+                const optionDom = new Option();
                 let cityName;
                 if (currentCities[index] instanceof Array) {
                     cityName = currentCities[index][0];
-                    $option.attr('data-postcode', currentCities[index][1]);
+                    optionDom.setAttribute('data-postcode', currentCities[index][1]);
                 } else {
                     cityName = currentCities[index];
                 }
-                $option.prop('value', cityName)
-                    .text(cityName);
-                $citybox.append($option);
+                optionDom.value = cityName;
+                optionDom.text = cityName;
+                $citybox.append(optionDom);
             }
         }
 
-        let $citySelected = $citybox.find('option[value="' + value + '"]');
+        const $citySelected = $citybox.find('option[value="' + value + '"]');
         if ($citySelected.length) {
             $citySelected.prop('selected', true);
         } else {
