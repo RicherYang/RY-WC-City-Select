@@ -265,7 +265,7 @@ final class RY_WCS
             WP_Filesystem();
         }
 
-        $download_file = download_url('https://ry-plugin.com/wp-content/uploads/2025/02/geonames-org-data.2024.2.4.zip');
+        $download_file = download_url('https://plugins.svn.wordpress.org/ry-wc-city-select/assets/geonames-org-data.2024.2.4.zip');
         if (!is_wp_error($download_file)) {
             if (sha1_file($download_file) === '7955ac7fe48b7eebd9d99fd89dab52f1a76cb5fb') {
                 if (is_dir(RY_WCS_PLUGIN_DIR . $this->geonames_org_path)) {

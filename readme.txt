@@ -5,7 +5,7 @@ Tags: woocommerce, city, select, dropdown
 Requires at least: 6.8
 Requires PHP: 8.2
 Tested up to: 7.1
-Stable tag: 2.3.0
+Stable tag: 2.3.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -89,6 +89,9 @@ add_filter('ry_wcs_load_geonames_org', '__return_true');
 
 
 == Changelog ==
+
+= 2.3.1 - 2026/11/20 =
+* Fixed - Geonames zip download link.
 
 = 2.3.0 - 2026/10/21 =
 * Change - Not auto selected the first city option.
